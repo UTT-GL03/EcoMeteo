@@ -35,3 +35,20 @@ Nous faisons l'hypothèse que les utilisateurs visitent notre plateforme plusieu
   5. Il revient à la liste des prévisions pour continuer son exploration ou consulter d'autres jours.
 
 # Impact de l'exécution des scénarios auprès de différents services concurrents
+L'EcoIndex d'une page (de A à G) est calculé (sources : EcoIndex, Octo, GreenIT) en fonction du positionnement de cette page parmi les pages mondiales concernant :
+
+    le nombre de requêtes lancées,
+    le poids des téléchargements,
+    le nombre d'éléments du document.
+
+Nous avons choisi de comparer l'impact des scénarios sur les services de quotidiens nationaux de diverses sensibilités politiques, économiques et environementales :
+
+    MétéoFrance
+    La Chaîne Météo
+    MétéoCiel
+    Météo60 
+
+Les résultats sont les suivants (attention, d'une journée à l'autre, on peut observer une certaine variabilité) :
+
+    Scénario "Consultation rapide de la météo",
+    Scénario "Exploration des prévisions à long terme".
