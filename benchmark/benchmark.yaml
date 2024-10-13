@@ -1,0 +1,35 @@
+- name: Météo France
+  url: https://meteofrance.com/
+  actions:
+    - name: clique météo Paris
+      type: click
+      element: '#map > div.leaflet-pane.leaflet-map-pane > div.leaflet-pane.leaflet-overlay-pane > svg > g > path:nth-child(3)'
+      screenshot: benchmark/screenshots/paris.png
+      pageChange: true
+      waitForNavigation: networkidle2
+    - name: Choisir la période
+      type: click
+      element: '#msc_WE'
+      screenshot: benchmark/screenshots/paris.png
+    - name: retour à l'acceuil
+      type: click
+      element: '#header_top_left > div'
+      pageChange: true
+      waitForNavigation: networkidle2
+    - name: scroll page
+      type: scroll
+    - name: aller sur un article
+      type: click
+      element: '#block-mfcontenueditorialwidget-9 > ul > li:nth-child(1) > a'
+      pageChange: true
+      waitForNavigation: networkidle2
+      screenshot: benchmark/screenshots/article.png
+    - name: scroll page
+      type: scroll
+
+
+
+  # - MétéoFrance
+  # - La Chaîne Météo
+  # - MétéoCiel
+  # - Météo60 
