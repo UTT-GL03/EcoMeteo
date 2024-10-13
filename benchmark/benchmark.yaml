@@ -4,13 +4,12 @@
     - name: clique météo Paris
       type: click
       element: '#map > div.leaflet-pane.leaflet-map-pane > div.leaflet-pane.leaflet-overlay-pane > svg > g > path:nth-child(3)'
-      screenshot: benchmark/screenshots/paris.png
       pageChange: true
       waitForNavigation: networkidle2
     - name: Choisir la période
       type: click
       element: '#msc_WE'
-      screenshot: benchmark/screenshots/paris.png
+      screenshot: benchmark/screenshots/MF_paris.png
     - name: retour à l'acceuil
       type: click
       element: '#header_top_left > div'
@@ -23,13 +22,87 @@
       element: '#block-mfcontenueditorialwidget-9 > ul > li:nth-child(1) > a'
       pageChange: true
       waitForNavigation: networkidle2
-      screenshot: benchmark/screenshots/article.png
+      screenshot: benchmark/screenshots/MF_article.png
     - name: scroll page
       type: scroll
 
+# - name: Météo Ciel
+#   url: https://www.meteociel.fr/
+#   actions:
+#     - name: tout accepter (cookie)
+#       type: click
+#       element: text/Tout Accepter
+#     - name: clique météo Ile de France
+#       type: click
+#       element: '#FranceRegion > a:nth-child(8)'
+#       pageChange: true
+#       waitForNavigation: networkidle2
+#     - name: Choisir la période
+#       type: click
+#       element: 'body > center > table:nth-child(1) > tbody > tr.texte > td:nth-child(2) > table:nth-child(2) > tbody > tr:nth-child(2) > td > table > tbody > tr > td > a:nth-child(11)'
+#       screenshot: benchmark/screenshots/MF_paris.png
+#     - name: retour à l'acceuil
+#       type: click
+#       element: 'body > center > table:nth-child(1) > tbody > tr:nth-child(1) > td > div > a:nth-child(1) > img'
+#       pageChange: true
+#       waitForNavigation: networkidle2
+#     - name: scroll page
+#       type: scroll
+#     - name: aller sur un article
+#       type: click
+#       element: 'body > center > table:nth-child(1) > tbody > tr.texte > td:nth-child(2) > table:nth-child(1) > tbody > tr.texte > td:nth-child(1) > center > dl > dt:nth-child(1) > a'
+#       pageChange: true
+#       waitForNavigation: networkidle2
+#       screenshot: benchmark/screenshots/MF_article.png
+#     - name: scroll page
+#       type: scroll
+
+
+
+# - name: La Chaîne Météo
+#   url: https://www.lachainemeteo.com/
+#   actions:
+#     - name: tout accepter (cookie)
+#       type: click
+#       element: text/Tout Accepter
+#       screenshot: benchmark/screenshots/LCM_parisé.png
+#     - name: scroll page
+#       type: scroll
+#     - name: clique météo Paris
+#       type: click
+#       element: '#map > div.leaflet-pane.leaflet-map-pane > div.leaflet-pane.leaflet-paneMarkerUserEvent-pane > div:nth-child(1) > button'
+#       screenshot: benchmark/screenshots/LCM_paris.png
+#       pageChange: true
+#       waitForNavigation: networkidle2
+#     - name: scroll page
+#       type: scroll
+#     - name: Changer de jour
+#       type: click
+#       element: '#forecast-timetable > div > div > div.slider > ul > li:nth-child(7) > a'
+#       screenshot: benchmark/screenshots/LCM_paris_jour2.png
+#       pageChange: true
+#       waitForNavigation: networkidle2
+#     - name: scroll page
+#       type: scroll
+#     - name: retour à l'acceuil
+#       type: click
+#       element: '#header > div.grid-container.container-l.header-container > div.grid.col-8.col-m-3.col-l-2.logo > a'
+#       pageChange: true
+#       waitForNavigation: networkidle2
+#     - name: scroll page
+#       type: scroll
+#     - name: aller sur un article
+#       type: click
+#       element: '#weather-news > div.videos-container.slider > ul > li:nth-child(1) > a'
+#       pageChange: true
+#       waitForNavigation: networkidle2
+#       screenshot: benchmark/screenshots/LCMarticle.png
+#     - name: scroll page
+#       type: scroll
 
 
   # - MétéoFrance
   # - La Chaîne Météo
   # - MétéoCiel
-  # - Météo60 
+  # - Météo60
+  # - https://www.meteo-villes.com/
