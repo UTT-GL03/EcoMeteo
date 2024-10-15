@@ -66,6 +66,7 @@ L'interface retenue est composée d'une seule "pages Web" :
 
 Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec dummy-json). Bien que fictives, ces données correspondent à la structure des services concurrents.
 Nous avons pu généré la météo sur 7 jours pour 3 villes diférentes.
+Le format des données est inspiré de celle d'API que nous avons pu trouver, les villes remplacent les stations météo.
 
 Ainsi, pour chaques jours, nous avons :
 
