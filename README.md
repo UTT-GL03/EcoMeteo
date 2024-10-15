@@ -24,9 +24,12 @@ La numérisation impacte directement les comportements de consultation des prév
 # Scénarios d'usage et impacts
 Nous faisons l'hypothèse que les utilisateurs visitent notre plateforme plusieurs fois par jour, par exemple en milieu d'après-midi avant de sortir pour une activité en extérieur ou avant de partir au travail, afin de vérifier les conditions météorologiques actuelles et les prévisions à venir. Ces visites peuvent durer quelques instants seulement. Pour cette raison, nous avons choisi de modéliser les scénarios suivants : l'un centré sur la consultation rapide de la météo en temps réel, et l'autre sur l'exploration des prévisions à long terme pour planifier des événements futurs.
 
-# Scénario 1 Consultation rapide de la météo
+# Scénario 1 Consultation de la météo sur Paris et d'un article
   1. L'utilisateur se connecte à Météo France ou à un autre service météo en ligne.
   2. Il sélectionne sa localisation (ville, région) ou laisse le site utiliser sa position géographique.
+  3. Il choisit de voir la mètéo du weekend.
+  4. Il retourne sur la page d'accueil.
+  5. Il séléctionne un article et le lit.
 
 # Scénario 2 Exploration des prévisions à long terme
   1. L'utilisateur effectue à nouveau les étapes 1, 2 et 3 du scénario 1.
@@ -43,15 +46,15 @@ L'EcoIndex d'une page (de A à G) est calculé (sources : EcoIndex, Octo, GreenI
 
 Nous avons choisi de comparer l'impact des scénarios sur les services de quotidiens nationaux de diverses sensibilités politiques, économiques et environementales :
 
-  - "MétéoFrance",
-  - "La Chaîne Météo",
-  - "MétéoCiel",
-  - "Météo60".
+  - MétéoFrance,
+  - La Chaîne Météo (problème cookies),
+  - MétéoCiel (problème cookies),
+  - Météo60 (bientôt).
 
 Les résultats sont les suivants (attention, d'une journée à l'autre, on peut observer une certaine variabilité) :
 
-  - scénario "Consultation rapide de la météo",
-  - scénario "Exploration des prévisions à long terme".
+  - scénario "[Consultation de la météo sur Paris et d'un article](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/EcoMeteo/main/benchmark/benchmark.html)",
+  - scénario "Exploration des prévisions à long terme" (À venir).
 
 # Maquette de l'interface et échantillon de données
 
