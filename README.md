@@ -52,3 +52,21 @@ Les résultats sont les suivants (attention, d'une journée à l'autre, on peut 
 
   - scénario "Consultation rapide de la météo",
   - scénario "Exploration des prévisions à long terme".
+
+# Maquette de l'interface et échantillon de données
+
+Au vu des différents services comparés, des exigences environnementales exprimées plus haut et des scénarios retenus, nous avons défini pour notre prototype une maquette de l'interface et un échantillon de données réalistes.
+
+L'interface retenue est composée d'une seule "pages Web" :
+
+![image](https://github.com/user-attachments/assets/7759861e-7446-487e-ac34-3c65c7a5635e)
+
+Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec dummy-json). Bien que fictives, ces données correspondent à la structure des services concurrents.
+Nous avons pu généré la météo sur 7 jours pour 3 villes diférentes.
+
+Ainsi, pour chaques jours, nous avons :
+
+  - température, 
+  - taux d'humidité, 
+  - vent, 
+  - précipitation.
