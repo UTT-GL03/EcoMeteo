@@ -47,9 +47,9 @@ L'EcoIndex d'une page (de A à G) est calculé (sources : EcoIndex, Octo, GreenI
 Nous avons choisi de comparer l'impact des scénarios sur les services de quotidiens nationaux de diverses sensibilités politiques, économiques et environementales :
 
   - MétéoFrance,
-  - [La Chaîne Météo (problème cookies)](https://pngpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/EcoMeteo/main/benchmark/greenit_analysis_extension/LaChaineMeteo_greenit.png),
-  - [MétéoCiel (problème cookies)](https://pngpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/EcoMeteo/main/benchmark/greenit_analysis_extension/MeteoCiel_greenit.png),
-  - [Météo60 (bientôt)](https://pngpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/EcoMeteo/main/benchmark/greenit_analysis_extension/Meteo60_greenit.png).
+  - [La Chaîne Météo (problème cookies)](https://raw.githubusercontent.com/UTT-GL03/EcoMeteo/main/benchmark/greenit_analysis_extension/LaChaineMeteo_greenit.png),
+  - [MétéoCiel (problème cookies)](https://raw.githubusercontent.com/UTT-GL03/EcoMeteo/main/benchmark/greenit_analysis_extension/MeteoCiel_greenit.png),
+  - [Météo60 (bientôt)](https://raw.githubusercontent.com/UTT-GL03/EcoMeteo/main/benchmark/greenit_analysis_extension/Meteo60_greenit.png).
 
 Les résultats sont les suivants (attention, d'une journée à l'autre, on peut observer une certaine variabilité) :
 
