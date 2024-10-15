@@ -5,7 +5,7 @@ L’application a pour objectif de fournir des prévisions météorologiques pou
 - La surutilisation des données météorologiques en ligne.
 - Un rafraîchissement automatique très fréquent (parfois toutes les 30 secondes).
 - Trop de publicités intrusives, dégradant l’expérience utilisateur.
-- Une surcharge d’informations jugées peu essentielles (exemple : heures précises du lever/coucher du soleil).
+- Une surcharge d’informations jugées peu essentielles (exemple : articles, météo de la France, météo sur 15 jours).
 
 # Utilité sociale
 L’utilité sociale de ce projet réside dans sa capacité à proposer une alternative plus durable à la consultation des prévisions météorologiques. Aujourd’hui, l’empreinte énergétique du numérique est de plus en plus préoccupante, et chaque action en ligne, telle que la consultation de la météo, contribue à la consommation de ressources. Notre application vise donc à :
@@ -16,10 +16,10 @@ L’utilité sociale de ce projet réside dans sa capacité à proposer une alte
 
 # Impact de la numérisation
 La numérisation impacte directement les comportements de consultation des prévisions météorologiques. Avec la démocratisation des smartphones, les utilisateurs ont pris l’habitude de consulter la météo plusieurs fois par jour, provoquant une surconsommation d’énergie et un transfert massif de données inutiles. Notre solution numérique apporte plusieurs améliorations :
-- Optimisation de la consommation énergétique : en réduisant la fréquence de rafraîchissement des données (par exemple, toutes les 5 minutes au lieu de 30 secondes), nous visons à réduire l’impact environnemental.
+- Optimisation de la consommation énergétique : en réduisant la fréquence de rafraîchissement des données (par exemple, toutes les 5 minutes au lieu de 30 secondes) ou en la supprimant totalement, nous visons à réduire l’impact environnemental.
 - Réduction des données affichées : nous proposons une interface minimaliste, présentant uniquement les informations essentielles. Les utilisateurs peuvent demander des détails supplémentaires, mais ces informations sont limitées en nombre.
 - Amélioration de l’expérience utilisateur : sans publicités et avec moins d’informations superflues, notre application devient plus agréable et facile à utiliser.
-- Modèle de prévisions : en limitant la consultation de prévisions à court terme (par exemple sur 3 jours maximum), nous limitons la surcharge des serveurs et la consommation énergétique liée à la gestion de données à plus long terme, qui est souvent peu fiable et plus coûteuse à générer.
+- Modèle de prévisions : en limitant la consultation de prévisions à court terme (par exemple sur 3 jours maximum), nous limitons la surcharge des serveurs et la consommation énergétique liée à la gestion de données à plus long terme, qui est souvent peu fiable. Cette prévisions sur une courte période pourrait à long terme inciter les developpeurs d'API météo à réduire leurs plage de données ce qui aurait un impact important. 
 
 # Scénarios d'usage et impacts
 Nous faisons l'hypothèse que les utilisateurs visitent notre plateforme plusieurs fois par jour, par exemple en milieu d'après-midi avant de sortir pour une activité en extérieur ou avant de partir au travail, afin de vérifier les conditions météorologiques actuelles et les prévisions à venir. Ces visites peuvent durer quelques instants seulement. Pour cette raison, nous avons choisi de modéliser les scénarios suivants : l'un centré sur la consultation rapide de la météo en temps réel, et l'autre sur l'exploration des prévisions à long terme pour planifier des événements futurs.
@@ -43,12 +43,12 @@ L'EcoIndex d'une page (de A à G) est calculé (sources : EcoIndex, Octo, GreenI
 
 Nous avons choisi de comparer l'impact des scénarios sur les services de quotidiens nationaux de diverses sensibilités politiques, économiques et environementales :
 
-  - MétéoFrance
-  - La Chaîne Météo
-  - MétéoCiel
-  - Météo60 
+  - "MétéoFrance",
+  - "La Chaîne Météo",
+  - "MétéoCiel",
+  - "Météo60".
 
 Les résultats sont les suivants (attention, d'une journée à l'autre, on peut observer une certaine variabilité) :
 
-  - Scénario "Consultation rapide de la météo",
-  - Scénario "Exploration des prévisions à long terme".
+  - scénario "Consultation rapide de la météo",
+  - scénario "Exploration des prévisions à long terme".
