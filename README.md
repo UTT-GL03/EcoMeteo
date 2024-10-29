@@ -111,4 +111,5 @@ Nous mesurons ici l'effet positif de l'adoption d'outils de développement Web i
 |---|--------:|------------:|--------------:|---------:|---------------------:
 | Mode "développement" | 81,85 A🟢 | 1,36 | 60 | 26 | 1678
 | Mode "pré-production"  | 94,35 A🟢 |  1,11 | 44 | 4 | 328
+
 __Tab.1__: Évaluation de l'impact du prototype de la page d'accueil.
