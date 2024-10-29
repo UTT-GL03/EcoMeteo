@@ -1,17 +1,16 @@
-import Select from 'react-select';
 import 'dayjs/locale/fr'
 import data from './assets/sample_data.json'
-import { useState } from 'react';
 
 
 
-function DaySelector() {
-
+function DaySelector({date ,dateChange}) {
 
     return (
-        <main className="container"  style={{ display: "flex", alignItems: "center", padding: "20px"}}>
-            <p>daySelector</p>
-        </main>
+        <div className="grid">
+            <button value={"2024-10-08 00:00"} onClick={() => dateChange("2024-10-08 00:00")}>8 octobre</button>
+            <button value={"2024-10-09 00:00"} onClick={() => dateChange("2024-10-09 00:00")}>9 octobre</button>
+            <button value={"2024-10-10 00:00"} onClick={() => dateChange("2024-10-10 00:00")}>10 octobre</button>
+        </div>
     )
 }
 

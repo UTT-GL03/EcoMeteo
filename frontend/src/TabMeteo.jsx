@@ -10,8 +10,8 @@ dayjs.locale('fr')
 
 
 
-function TabMeteo({ date }) {
-    const param = {city: "Paris", date: "2024-10-08 00:00"}
+function TabMeteo({ date, city }) {
+    const param = {city: city, date: date}
     
     const getWeather = (city, date) => {
         const cityData = data.meteo.find(item => item.city === city);

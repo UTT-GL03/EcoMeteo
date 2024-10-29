@@ -1,4 +1,4 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
@@ -9,6 +9,9 @@ import TabMeteo from './TabMeteo'
 
 
 function App() {
+
+  const [selectedCity, setSelectedCity] = useState('Paris');
+  const [selectedDate, setSelectedDate] = useState("2024-10-08 00:00");
 
   const getCurrentDateTime = () => {
     const now = new Date();
@@ -22,34 +25,18 @@ function App() {
     return `${year}-${month}-${day} ${hours}:${minutes}`;
   };
 
+  const handleCity = (city) => {
+    setSelectedCity(city); 
+  };
+  const handleDate = (date) => {
+    setSelectedDate(date); 
+  };
+
   return (
     <>
-      <Header />
-      <TabMeteo date={getCurrentDateTime()}/>
-      <DaySelector />
-      {/*<div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      {/* <Routes>
-        <Route path="/" element={<Header/>} />
-      </Routes> */}
+      <Header ville={selectedCity} cityChange={handleCity}/>
+      <TabMeteo date={selectedDate} city={selectedCity}/>
+      <DaySelector date={selectedDate} dateChange={handleDate}/>
     </>
   )
 }
