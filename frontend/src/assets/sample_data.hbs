@@ -2,7 +2,7 @@
   "meteo": [
     {{#repeat 3}}
       {
-        "Ville": "{{random 'Paris' 'Troyes' 'Toulouse'}}",
+        "city": "{{random 'Paris' 'Troyes' 'Toulouse'}}",
         "meteo": [{{#repeat 7}}
           {
             "date": "{{date '2024-10-07' '2024-10-08' 'YYYY-MM-DD hh'}}",
@@ -20,7 +20,7 @@
 {
   "meteo": [
     {
-      "Ville": "Paris",
+      "city": "Paris",
       "meteo": [
         {
           "date": "2024-10-07 00:00",
@@ -74,7 +74,7 @@
       ]
     },
     {
-      "Ville": "Troyes",
+      "city": "Troyes",
       "meteo": [
         {
           "date": "2024-10-07 00:00",
@@ -128,7 +128,7 @@
       ]
     },
     {
-      "Ville": "Toulouse",
+      "city": "Toulouse",
       "meteo": [
         {
           "date": "2024-10-07 00:00",

@@ -2,7 +2,7 @@
 {
   "meteo": [
     {
-      "Ville": "Paris",
+      "city": "Paris",
       "meteo": [
         {
           "date": "2024-10-07 00:00",
@@ -56,7 +56,7 @@
       ]
     },
     {
-      "Ville": "Troyes",
+      "city": "Troyes",
       "meteo": [
         {
           "date": "2024-10-07 00:00",
@@ -110,7 +110,7 @@
       ]
     },
     {
-      "Ville": "Toulouse",
+      "city": "Toulouse",
       "meteo": [
         {
           "date": "2024-10-07 00:00",

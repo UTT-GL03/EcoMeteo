@@ -47,9 +47,9 @@ L'EcoIndex d'une page (de A à G) est calculé (sources : EcoIndex, Octo, GreenI
 Nous avons choisi de comparer l'impact des scénarios sur les services de quotidiens nationaux de diverses sensibilités politiques, économiques et environementales :
 
   - MétéoFrance,
-  - [La Chaîne Météo (problème cookies)](https://raw.githubusercontent.com/UTT-GL03/EcoMeteo/main/benchmark/greenit_analysis_extension/LaChaineMeteo_greenit.png),
-  - [MétéoCiel (problème cookies)](https://raw.githubusercontent.com/UTT-GL03/EcoMeteo/main/benchmark/greenit_analysis_extension/MeteoCiel_greenit.png),
-  - [Météo60 (bientôt)](https://raw.githubusercontent.com/UTT-GL03/EcoMeteo/main/benchmark/greenit_analysis_extension/Meteo60_greenit.png).
+  - [La Chaîne Météo (problème cookies)](./benchmark/greenit_analysis_extension/LaChaineMeteo_greenit.png),
+  - [MétéoCiel (problème cookies)](./benchmark/greenit_analysis_extension/MeteoCiel_greenit.png),
+  - [Météo60 (bientôt)](./benchmark/greenit_analysis_extension/Meteo60_greenit.png).
 
 Les résultats sont les suivants (attention, d'une journée à l'autre, on peut observer une certaine variabilité) :
 
@@ -62,7 +62,8 @@ Au vu des différents services comparés, des exigences environnementales exprim
 
 L'interface retenue est composée d'une seule "pages Web" :
 
-![image](https://github.com/user-attachments/assets/7759861e-7446-487e-ac34-3c65c7a5635e)
+![image](./frontend/mockup.png)
+__Fig.1 :__ maquette de l'interface du prototype
 
 Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec dummy-json). Bien que fictives, ces données correspondent à la structure des services concurrents.
 Nous avons pu généré la météo sur 7 jours pour 3 villes diférentes.
@@ -74,3 +75,41 @@ Ainsi, pour chaques jours, nous avons :
   - taux d'humidité, 
   - vent, 
   - précipitation.
+
+
+# Prototype n°1 : Fonctionnalités pour le scénario prioritaire avec données statiques
+
+Pour cette première version du prototype :
+
+  - l'échantillon de données est encore chargé dans le code de manière statique,
+  - les fonctionnalités implémentées ne sont que celles nécessaires pour suivre le scénario prioritaire ("Regarder la météo sur Paris").
+Ce scénario nécessite de pouvoir charger la page principale et regarder la météo sur Paris
+
+## Page Météo
+
+Nous avons développé la page météo (cf. Fig. 2) pour qu'elle affiche l'échantillon de données sous une forme proche de ce que prévoyait la maquette.
+
+![image](./frontend/mainPage_screenshot.png)
+__Fig.2:__ Prototype de la page météo
+
+Pour l'instant, nous avons choisi un *framework* de mise en page minimaliste ([*PicoCSS*](https://picocss.com)).
+nous verrons si l'impact environnemental du passage à un *framework* de mise en page plus puissant.
+
+Nous avons décidé pour l'instant de n'inclure aucune image ni design pour l'affichage de la météo.
+Même si ces design rendent l'utilisation de la plupart des applications de prévisions météo, elles sont parfois inutile et apporte une polution visuelle et peu avoir un impact environnemental.
+Également, les données statiques que nous utilisont ici sont uniquement les données importantes, nous n'avons pas encore vu la partie pour afficher des données supplémentaires.
+En fonction de l'utilités de ces dernières et de leurs impact nous les ajouterons ou non aux prototypes suivants.
+
+
+Dans l'état actuel du prototype, il est possible d'avoir une première idée de l'impact environnemental du *frontend*.
+Bien entendu, il manque encore le chargement dynamique des données, mais nous pouvons déjà évaluer l'impact de l'affichage des données et du *framework* (au sens large : *React*, *PicoCSS*, *DayJS*).
+Cette évaluation de l'impact (cf. Tab.1) est déjà encourageante en mode "développement" mais encore plus en mode "pré-production".
+Nous mesurons ici l'effet positif de l'adoption d'outils de développement Web intégrant la ["minification"](https://fr.wikipedia.org/wiki/Minification) (cf. *Wikipédia*) du code et la concaténation du code d'une part et des feuilles de style d'autre part.
+
+
+|   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
+|---|--------:|------------:|--------------:|---------:|---------------------:
+| Mode "développement" | 81,85 A🟢 | 1,36 | 60 | 26 | 1678
+| Mode "pré-production"  | 94,35 A🟢 |  1,11 | 44 | 4 | 328
+
+__Tab.1__: Évaluation de l'impact du prototype de la page d'accueil.
