@@ -2,7 +2,6 @@
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import 'dayjs/locale/fr'
-// import data from './assets/sample_data.json'
 import { useState, useEffect } from 'react';
 
 dayjs.extend(relativeTime)
