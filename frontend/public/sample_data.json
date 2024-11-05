@@ -1,0 +1,167 @@
+
+{
+  "meteo": [
+    {
+      "city": "Paris",
+      "meteo": [
+        {
+          "date": "2024-10-07 00:00",
+          "temperature": "14°C",
+          "humidity": "68%",
+          "wind": "Est",
+          "precipitation": "Pluie"
+        },
+        {
+          "date": "2024-10-08 00:00",
+          "temperature": "16°C",
+          "humidity": "73%",
+          "wind": "Sud-Est",
+          "precipitation": "Aucun"
+        },
+        {
+          "date": "2024-10-09 00:00",
+          "temperature": "12°C",
+          "humidity": "80%",
+          "wind": "Nord-Est",
+          "precipitation": "Neige"
+        },
+        {
+          "date": "2024-10-10 00:00",
+          "temperature": "11°C",
+          "humidity": "54%",
+          "wind": "Nord-Est",
+          "precipitation": "Pluie"
+        },
+        {
+          "date": "2024-10-11 00:00",
+          "temperature": "17°C",
+          "humidity": "73%",
+          "wind": "Nord-Ouest",
+          "precipitation": "Aucun"
+        },
+        {
+          "date": "2024-10-12 00:00",
+          "temperature": "21°C",
+          "humidity": "76%",
+          "wind": "Nord-Ouest",
+          "precipitation": "Pluie"
+        },
+        {
+          "date": "2024-10-13 00:00",
+          "temperature": "17°C",
+          "humidity": "90%",
+          "wind": "Sud-Est",
+          "precipitation": "Neige"
+        }
+      ]
+    },
+    {
+      "city": "Troyes",
+      "meteo": [
+        {
+          "date": "2024-10-07 00:00",
+          "temperature": "24°C",
+          "humidity": "69%",
+          "wind": "Nord-Ouest",
+          "precipitation": "Neige"
+        },
+        {
+          "date": "2024-10-08 00:00",
+          "temperature": "20°C",
+          "humidity": "90%",
+          "wind": "Est",
+          "precipitation": "Aucun"
+        },
+        {
+          "date": "2024-10-09 00:00",
+          "temperature": "25°C",
+          "humidity": "78%",
+          "wind": "Ouest",
+          "precipitation": "Grêle"
+        },
+        {
+          "date": "2024-10-10 00:00",
+          "temperature": "23°C",
+          "humidity": "67%",
+          "wind": "Est",
+          "precipitation": "Aucun"
+        },
+        {
+          "date": "2024-10-11 00:00",
+          "temperature": "13°C",
+          "humidity": "65%",
+          "wind": "Nord-Ouest",
+          "precipitation": "Aucun"
+        },
+        {
+          "date": "2024-10-12 00:00",
+          "temperature": "22°C",
+          "humidity": "52%",
+          "wind": "Sud-Est",
+          "precipitation": "Pluie"
+        },
+        {
+          "date": "2024-10-13 00:00",
+          "temperature": "17°C",
+          "humidity": "63%",
+          "wind": "Est",
+          "precipitation": "Neige"
+        }
+      ]
+    },
+    {
+      "city": "Toulouse",
+      "meteo": [
+        {
+          "date": "2024-10-07 00:00",
+          "temperature": "21°C",
+          "humidity": "62%",
+          "wind": "Nord-Est",
+          "precipitation": "Pluie"
+        },
+        {
+          "date": "2024-10-08 00:00",
+          "temperature": "20°C",
+          "humidity": "74%",
+          "wind": "Est",
+          "precipitation": "Aucun"
+        },
+        {
+          "date": "2024-10-09 00:00",
+          "temperature": "24°C",
+          "humidity": "71%",
+          "wind": "Sud",
+          "precipitation": "Aucun"
+        },
+        {
+          "date": "2024-10-10 00:00",
+          "temperature": "12°C",
+          "humidity": "88%",
+          "wind": "Nord-Est",
+          "precipitation": "Pluie"
+        },
+        {
+          "date": "2024-10-11 00:00",
+          "temperature": "19°C",
+          "humidity": "58%",
+          "wind": "Est",
+          "precipitation": "Neige"
+        },
+        {
+          "date": "2024-10-12 00:00",
+          "temperature": "20°C",
+          "humidity": "90%",
+          "wind": "Nord",
+          "precipitation": "Pluie"
+        },
+        {
+          "date": "2024-10-13 00:00",
+          "temperature": "22°C",
+          "humidity": "66%",
+          "wind": "Ouest",
+          "precipitation": "Aucun"
+        }
+      ]
+    }
+  ]
+}
