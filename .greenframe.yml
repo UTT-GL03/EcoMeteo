@@ -3,3 +3,5 @@ projectName: EcoMeteo
 scenarios:
     - path: ./benchmark/scenario1.js
       name: Consulter la page
+containers:
+  - ecometeo-static_hosting-1
