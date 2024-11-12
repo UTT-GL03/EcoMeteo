@@ -109,8 +109,8 @@ Nous mesurons ici l'effet positif de l'adoption d'outils de développement Web i
 
 |   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
 |---|--------:|------------:|--------------:|---------:|---------------------:
-| Mode "développement" | 81,85 A🟢 | 1,36 | 60 | 26 | 1678
-| Mode "pré-production" | 94,35 A🟢 |  1,11 | 44 | 4 | 328
+| Mode "développement" | 82 A🟢 | 1,36 | 60 | 26 | 1678
+| Mode "pré-production" | 94 A🟢 | 1,11 | 44 | 4 | 328
 
 __Tab.1__: Évaluation de l'impact du prototype de la page d'accueil.
 
@@ -118,10 +118,16 @@ Avec l'ajout de cette page, on peut tester un scénario de consultation de la m�
 
 |   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
 |---|--------:|------------:|--------------:|---------:|---------------------:
-| 1. Consulter la page d'accueil | 94.54 A🟢 |  1,11 | 43 | 3 | 327
-| 2. Choisir une ville | 94.54 A🟢 |  1,11 | 43 | 3 | 327
-| 3. Choisir un jour | 94.54 A🟢 |  1,11 | 43 | 3 | 327
+| 1. Consulter la page d'accueil | 95 A🟢 | 1,11 | 43 | 3 | 327
+| 2. Choisir une ville | 95 A🟢 | 1,11 | 43 | 3 | 327
+| 3. Choisir un jour | 95 A🟢 | 1,11 | 43 | 3 | 327
 
 __Tab.2__: Évaluation de l'impact du scénario "consulter la météo" dans le prototype n°1.
 
 Bien que ces estimation soit basses dû aux données statiques utilisées, elles nous permettent tout de même de comparer avec celle des services concurrents vues précédemment.
+
+# Prototype n°2 : Fonctionnalités pour le scénario prioritaire avec données statiques chargées de manière dynamique
+
+Pour cette deuxième version du prototype, les données (toujours statiques) sont désormais chargées par le frontend à travers le réseau immédiatement après un premier affichage à vide. Ce comportement, plus réaliste, n'a pour effet qu'une requête supplémentaire par page affichée.
+
+Concernant l'évaluation de l'impact environemental du scénario, par rapport au tableau précédent (cf. Tab.2), à l'exception du nombre de requêtes qui est incrémenté de 1, les résultats sont strictement identiques.

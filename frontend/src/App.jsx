@@ -34,7 +34,7 @@ function App() {
 
   return (
     <>
-      <Header ville={selectedCity} cityChange={handleCity}/>
+      <Header ville={selectedCity} cityChange={handleCity} selectedDate={selectedDate}/>
       <TabMeteo date={selectedDate} city={selectedCity}/>
       <DaySelector date={selectedDate} dateChange={handleDate}/>
     </>

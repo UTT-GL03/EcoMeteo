@@ -5,7 +5,7 @@ import data from './assets/sample_data.json'
 
 
 
-function Header({ ville, cityChange }) {
+function Header({ ville, cityChange, selectedDate }) {
 
     const options = data.meteo.map((item) => item.city)
     .map((city) => (
@@ -17,6 +17,9 @@ function Header({ ville, cityChange }) {
         cityChange(selectedOption.value); 
       };
 
+    const formattedDate = new Date(selectedDate).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' });
+
+
     return (
         <main className="container"  style={{ display: "flex", alignItems: "center", justifyContent: "space-around"}}>
             <Select
@@ -26,7 +29,10 @@ function Header({ ville, cityChange }) {
             placeholder="Choisissez une ville"
             />
             <h2>Éco Météo</h2>
-            <p>{ville}</p>
+            <div>
+                <p>{ville}</p>
+                <p>{formattedDate}</p>
+            </div>
         </main>
     )
 }
