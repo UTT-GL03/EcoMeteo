@@ -1,0 +1,5 @@
+baseURL: http://localhost
+projectName: EcoMeteo
+scenarios:
+    - path: ./benchmark/scenario1.js
+      name: Consulter la page
