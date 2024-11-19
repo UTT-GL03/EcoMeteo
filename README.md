@@ -44,29 +44,28 @@ L'EcoIndex d'une page (de A à G) est calculé (sources : EcoIndex, Octo, GreenI
   - le poids des téléchargements,
   - le nombre d'éléments du document.
 
-Nous avons choisi de comparer l'impact des scénarios sur les services de quotidiens nationaux de diverses sensibilités politiques, économiques et environementales :
+Nous avons choisi de comparer l'impact des scénarios sur différents services de météo nationaux :
 
-  - MétéoFrance,
-  - [La Chaîne Météo (problème cookies)](./benchmark/greenit_analysis_extension/LaChaineMeteo_greenit.png),
-  - [MétéoCiel (problème cookies)](./benchmark/greenit_analysis_extension/MeteoCiel_greenit.png),
-  - [Météo60 (bientôt)](./benchmark/greenit_analysis_extension/Meteo60_greenit.png).
+  - [Météo France](./benchmark/greenit_analysis_extension/MeteoFrance_greenit.png),
+  - [La Chaîne Météo](./benchmark/greenit_analysis_extension/LaChaineMeteo_greenit.png),
+  - [MétéoCiel](./benchmark/greenit_analysis_extension/MeteoCiel_greenit.png),
+  - [Météo60](./benchmark/greenit_analysis_extension/Meteo60_greenit.png).
 
-Les résultats sont les suivants (attention, d'une journée à l'autre, on peut observer une certaine variabilité) :
-
-  - scénario "[Consultation de la météo sur Paris et d'un article](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/EcoMeteo/main/benchmark/benchmark.html)",
-  - scénario "Exploration des prévisions à long terme" (À venir).
+Ayant eu des problèmes avec l'utilisation de greenit et des scénarios, par soucis de clarté nous avons décidé d'utiliser uniquement l'extensions Google Chrome de greenit pour chacun des services météo.
+L'analyse est porté sur la page principale de chacun des sites.
 
 # Maquette de l'interface et échantillon de données
 
 Au vu des différents services comparés, des exigences environnementales exprimées plus haut et des scénarios retenus, nous avons défini pour notre prototype une maquette de l'interface et un échantillon de données réalistes.
 
-L'interface retenue est composée d'une seule "pages Web" :
+L'interface retenue est composée d'une seule "page Web".
+On y retrouve le header avec le nom du site et un formulaire permettant de choisir la ville. Une partie principale où l'on pourra observer les prévisions météo. Et enfin une menu pour choisir le jour que l'on souhaite observer. (cf. Fig. 1)
 
 ![image](./frontend/mockup.png)
 __Fig.1 :__ maquette de l'interface du prototype
 
 Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec dummy-json). Bien que fictives, ces données correspondent à la structure des services concurrents.
-Nous avons pu généré la météo sur 7 jours pour 3 villes diférentes.
+Nous avons donc généré la météo sur 7 jours pour 3 villes diférentes.
 Le format des données est inspiré de celle d'API que nous avons pu trouver, les villes remplacent les stations météo.
 
 Ainsi, pour chaques jours, nous avons :
@@ -95,8 +94,8 @@ __Fig.2:__ Prototype de la page météo
 Pour l'instant, nous avons choisi un *framework* de mise en page minimaliste ([*PicoCSS*](https://picocss.com)).
 nous verrons si l'impact environnemental du passage à un *framework* de mise en page plus puissant.
 
-Nous avons décidé pour l'instant de n'inclure aucune image ni design pour l'affichage de la météo.
-Même si ces design rendent l'utilisation de la plupart des applications de prévisions météo, elles sont parfois inutile et apporte une polution visuelle et peu avoir un impact environnemental.
+Nous avons décidé pour l'instant de n'inclure aucune image ni design pour l'affichage de la météo. Même si ces design rendent l'utilisation de la plupart des applications de prévisions météo agréable, elles sont parfois inutile et apporte une polution visuelle et peu avoir un impact environnemental.
+Dans les prochains prototypes, nous allons inclure des pictogrammes, ces petites images souvent au format CSV sont très légères et rendent l'utilisation d'un site beaucoup plus agréable.
 Également, les données statiques que nous utilisont ici sont uniquement les données importantes, nous n'avons pas encore vu la partie pour afficher des données supplémentaires.
 En fonction de l'utilités de ces dernières et de leurs impact nous les ajouterons ou non aux prototypes suivants.
 
