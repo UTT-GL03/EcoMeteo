@@ -5,3 +5,4 @@ scenarios:
       name: Consulter la page
 containers:
   - ecometeo-static_hosting-1
+  - ecometeo-backend-1

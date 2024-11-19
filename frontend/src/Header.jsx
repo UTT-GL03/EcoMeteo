@@ -1,18 +1,21 @@
 import Select from 'react-select';
 import 'dayjs/locale/fr'
-import data from './assets/sample_data.json'
-// import { useState } from 'react';
 
+function Header({ data, ville, cityChange, selectedDate }) {
+    let options;
 
+    function cities(value, index, array) {
+        return array.indexOf(value) === index;
+    }
 
-function Header({ ville, cityChange, selectedDate }) {
+    if (data && data.rows) {
+        options = data.rows.map((item) => item.doc.city)
+            .filter(cities)
+            .map((city) => ({ value: city, label: city }));
+    }
+    
 
-    const options = data.meteo.map((item) => item.city)
-    .map((city) => (
-        { value: city, label: city }
-    ))
-
-    const defaultValue = options.find(city => city.value === city);
+    const defaultValue = options && options.find(city => city.value === city);
     const handleChange = (selectedOption) => {
         cityChange(selectedOption.value); 
       };
@@ -25,7 +28,7 @@ function Header({ ville, cityChange, selectedDate }) {
             <Select
             defaultvalue={defaultValue}
             onChange={handleChange}
-            options={options} 
+            options={options && options} 
             placeholder="Choisissez une ville"
             />
             <h2>Éco Météo</h2>

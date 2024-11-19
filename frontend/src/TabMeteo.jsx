@@ -2,32 +2,22 @@
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import 'dayjs/locale/fr'
-import { useState, useEffect } from 'react';
 
 dayjs.extend(relativeTime)
 dayjs.locale('fr')
 
 
 
-function TabMeteo({ date, city }) {
+function TabMeteo({ data, date, city }) {
     const param = {city: city, date: date}
-    const [data, setData] = useState({});
-
-    useEffect(() => {
-        fetch('/sample_data.json')
-          .then(x => x.json())
-          .then(data => {
-            setData(data)
-          })
-      }, [])
-    
     
     const getWeather = (city, date) => {
-        if (data && data.meteo) {
-            const cityData = data.meteo.find(item => item.city === city);
+        if (data && data.rows) {
+            const cityData = data.rows.filter(item => item.doc.city === city);
             if (cityData) {
-            const weather = cityData.meteo.find(item => item.date === date);
-            return weather || null;
+                const weather = cityData.find(item => item.doc.meteo.date === date);
+                console.log(weather);
+                return weather.doc.meteo || null;
             }
             return null;
         }
