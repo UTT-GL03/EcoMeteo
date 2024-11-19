@@ -158,3 +158,20 @@ Par ailleurs, il nous est possible désormais d'évaluer l'impact écologique de
 ![image](./benchmark/screenshots/GF_analys_EcoMeteo_network.png)
 
 Fig.6 : Consommation de ressources par le serveur Web lors de la consultation de la page météo dans notre prototype.
+
+# Prototype n°3 : Fonctionnalités pour le scénario prioritaire avec données stockées dans une base de données
+
+Pour la troisième version du prototype, les données sont désormais stockées dans un système de base de données interrogeable à travers une API Web (CouchDB). L'intérêt d'une source de données dynamique est d'une part, à terme, de pouvoir ajouter ou modifier des données plus facilement, et d'autre part de déporter sur le serveur le filtrage des données pertinentes.
+
+Concernant ce deuxième enjeu, contrairement au projet du professeur, notre prototype se limite à une seule page. Ainsi, les mesures (cf. Fig.7) ne montrent pas de diminution de la charge réseau entre les deux prototypes pour la consultation de la page d'accueil.
+
+![image](./benchmark/screenshots/GF_analys_EcoMeteo_Prototype2_overview.png)
+![image](./benchmark/screenshots/GF_analys_EcoMeteo_Prototype3_overview.png)
+Fig.7 : Comparaison de l'impact de la consultation de la page d'accueil entre les prototypes 2 (en haut) et 3 (en bas).
+
+En revanche, nous avons maintenant une utilisation continue du CPU par la base de données (cf. Fig.8).
+![image](./benchmark/screenshots/GF_analys_EcoMeteo_Prototype3_backend.png)
+
+Fig.8 : Profil dans le temps de l'impact de la base de données lors de la consultation de la page d'accueil.
+
+De ces différentes mesures, nous pouvons retenir que l'effet de l'introduction d'une base de données, quoique négligeable, est, pour l'instant, plutôt défavorable d'un point de vue écologique. Le bilan de ce changement devrait cependant rapidement s'inverser avec l'augmentation de la quantité de données gérées.
