@@ -191,4 +191,13 @@ La figure 9 illustre l'impact du passage à l'échelle, de 15 à 9 000 fiches m�
 Fig.9 : Évolution de l'impact de la consultation de la page d'accueil en passant de 15 articles à 9000.
 
 ### Prise en compte du passage à l'échelle
-//TODO
+
+Dans notre contexte, pour contrer les défis liés à la mise à grande échelle, nous adopterons une stratégie visant à limiter les données récupérées à celles strictement nécessaires au moment de la consultation.  
+
+En effet, récupérer toutes les données dès le début, comme cela pourrait être fait dans une application classique, entraînerait une surcharge inutile du système et un impact environnemental accru. À la place, nous mettrons en place un mécanisme de requêtes ciblées, où les fiches météo seront récupérées en fonction de paramètres spécifiques : **la ville** et **la date**.  
+
+Ainsi, au lieu de charger l'ensemble des données disponibles, nous demanderons uniquement les informations nécessaires pour la fiche météo en cours de consultation. Ce fonctionnement nous permettra :  
+
+1. De réduire le volume de données transférées et traitées, optimisant ainsi les performances du système.  
+2. D'offrir une expérience utilisateur cohérente, sans ralentissement lié à la surcharge des ressources.  
+3. De minimiser l'impact environnemental en adaptant la consommation d'énergie aux besoins réels de l'utilisateur.  
