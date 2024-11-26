@@ -200,4 +200,10 @@ Ainsi, au lieu de charger l'ensemble des données disponibles, nous demanderons 
 
 1. De réduire le volume de données transférées et traitées, optimisant ainsi les performances du système.  
 2. D'offrir une expérience utilisateur cohérente, sans ralentissement lié à la surcharge des ressources.  
-3. De minimiser l'impact environnemental en adaptant la consommation d'énergie aux besoins réels de l'utilisateur.  
+3. De minimiser l'impact environnemental en adaptant la consommation d'énergie aux besoins réels de l'utilisateur.
+
+Vous pourrez constater les améliorations réalisées grâce à cette optimisation.
+
+![image](./benchmark/screenshots/GF_analys_EcoMeteo_huge_amout_data_optimized_overview.png)
+
+Fig.10 : Évolution de l'impact de la consultation de la page d'accueil en ne récupérant que les fiches météo nécessaires.
