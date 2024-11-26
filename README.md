@@ -175,3 +175,18 @@ En revanche, nous avons maintenant une utilisation continue du CPU par la base d
 Fig.8 : Profil dans le temps de l'impact de la base de données lors de la consultation de la page d'accueil.
 
 De ces différentes mesures, nous pouvons retenir que l'effet de l'introduction d'une base de données, quoique négligeable, est, pour l'instant, plutôt défavorable d'un point de vue écologique. Le bilan de ce changement devrait cependant rapidement s'inverser avec l'augmentation de la quantité de données gérées.
+
+# Prototype n°4 : Fonctionnalités pour le scénario prioritaire avec filtrage des données
+
+### Passage à l'échelle
+
+Dans notre cas, l'augmentation de la quantité de données à traiter proviendra essentiellement du nombre de villes prises en compte ainsi que du nombre de dates. Pour simuler un volume important de données lié à une augmentation du nombre de villes, nous avons conservé les trois villes initialement sélectionnées (Toulouse, Paris, Troyes). Cependant, nous avons ajouté un grand nombre de nouvelles dates. Cela reproduit l'effet de nombreuses villes avec quelques dates, tout en utilisant un nombre restreint de villes avec une multitude de dates. Cette approche nous permettra d'analyser les différences de performance de manière efficace.
+
+### Évolution de l'impact environnemental avant correction
+
+La figure 9 illustre l'impact du passage à l'échelle, de 15 à 9 000 fiches météorologiques (une fiche correspondant à une ville et une date). On observe, sur le backend, une multiplication par 5,8 de l'impact lié au processeur et, surtout, une augmentation significative de l'impact réseau : une multiplication par 11 pour le frontend, ainsi qu'une explosion non quantifiable (de 0 à 20 mWh) pour le backend.
+![image](./benchmark/screenshots/GF_analys_EcoMeteo_huge_amout_data_overview.png)
+Fig.9 : Évolution de l'impact de la consultation de la page d'accueil en passant de 15 articles à 9000.
+
+### Prise en compte du passage à l'échelle
+//TODO
