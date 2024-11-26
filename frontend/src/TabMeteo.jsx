@@ -8,20 +8,7 @@ dayjs.locale('fr')
 
 
 
-function TabMeteo({ data, date, city }) {
-    const param = {city: city, date: date}
-    
-    const getWeather = (city, date) => {
-        if (data && data.rows) {
-            const cityData = data.rows.filter(item => item.doc.city === city);
-            if (cityData) {
-                const weather = cityData.find(item => item.doc.meteo.date === date);
-                return weather.doc.meteo || null;
-            }
-            return null;
-        }
-      };
-    const weather = getWeather(param.city, param.date)
+function TabMeteo({ data }) {
 
     return (
         <main className="container">
@@ -36,10 +23,10 @@ function TabMeteo({ data, date, city }) {
             </thead>
             <tbody>
                 <tr>
-                <th>{weather && weather.temperature}</th>
-                <td>{weather && weather.precipitation}</td>
-                <td>{weather && weather.humidity}</td>
-                <td>{weather && weather.wind}</td>
+                <th>{data && data.meteo && data.meteo.temperature}</th>
+                <td>{data && data.meteo && data.meteo.precipitation}</td>
+                <td>{data && data.meteo && data.meteo.humidity}</td>
+                <td>{data && data.meteo && data.meteo.wind}</td>
                 </tr>
             </tbody>
             </table>

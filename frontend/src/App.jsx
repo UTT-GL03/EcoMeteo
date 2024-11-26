@@ -9,29 +9,46 @@ import TabMeteo from './TabMeteo'
 function App() {
 
   const [data, setData] = useState({});
-
-  useEffect(() => {
-    fetch('http://localhost:5984/ecometeo/_all_docs?include_docs=true')
-     .then(x => x.json())
-     .then(data => {
-        setData(data);
-      })
-}, [])
+  const [cities, setCities] = useState([]);
 
   const [selectedCity, setSelectedCity] = useState('Paris');
-  const [selectedDate, setSelectedDate] = useState("2024-10-08 00:00");
+  const [selectedDate, setSelectedDate] = useState("2024-10-08");
 
-  const getCurrentDateTime = () => {
-    const now = new Date();
-    
-    const year = now.getFullYear();
-    const month = String(now.getMonth() + 1).padStart(2, '0'); // Les mois commencent à 0
-    const day = String(now.getDate()).padStart(2, '0');
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-  
-    return `${year}-${month}-${day} ${hours}:${minutes}`;
-  };
+  useEffect(() => {
+
+    console.log(selectedCity, selectedDate);
+
+      fetch('http://localhost:5984/ecometeo/_find', {
+        method: 'POST',
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          selector: { city: selectedCity, "meteo.date" : selectedDate },
+          limit: 1
+        })
+      })     
+      .then(x => x.json())
+      .then(data => { 
+          setData(data.docs[0]);
+      })
+  }, [selectedCity, selectedDate]);
+
+  useEffect(() => {
+    fetch('http://localhost:5984/ecometeo/_find', {
+      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        selector: { "meteo.date" : selectedDate },
+        fields: ["city"],
+        limit: 1000000, // On veut tous les résultats (Ajout futur d'une table contenant une liste des villes)
+      })
+    })     
+    .then(x => x.json())
+    .then(data => {
+        const uniqueCities = [...new Set(data.docs.map(doc => doc.city))];
+        setCities(uniqueCities);
+    })
+  }, []);
+
 
   const handleCity = (city) => {
     setSelectedCity(city); 
@@ -42,7 +59,7 @@ function App() {
 
   return (
     <>
-      <Header data={data && data} ville={selectedCity} cityChange={handleCity} selectedDate={selectedDate}/>
+      <Header cities={cities && cities} ville={selectedCity} cityChange={handleCity} selectedDate={selectedDate}/>
       <TabMeteo data={data && data} date={selectedDate} city={selectedCity}/>
       <DaySelector date={selectedDate} dateChange={handleDate}/>
     </>

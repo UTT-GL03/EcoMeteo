@@ -1,19 +1,12 @@
 import Select from 'react-select';
 import 'dayjs/locale/fr'
 
-function Header({ data, ville, cityChange, selectedDate }) {
+function Header({ cities, ville, cityChange, selectedDate }) {
     let options;
 
-    function cities(value, index, array) {
-        return array.indexOf(value) === index;
-    }
-
-    if (data && data.rows) {
-        options = data.rows.map((item) => item.doc.city)
-            .filter(cities)
-            .map((city) => ({ value: city, label: city }));
-    }
-    
+    if (cities && cities[0]) {
+        options = cities.map((city) => ({ value: city, label: city }))
+    }    
 
     const defaultValue = options && options.find(city => city.value === city);
     const handleChange = (selectedOption) => {
