@@ -186,6 +186,7 @@ Dans notre cas, l'augmentation de la quantité de données à traiter proviendra
 
 La figure 9 illustre l'impact du passage à l'échelle, de 15 à 9 000 fiches météorologiques (une fiche correspondant à une ville et une date). On observe, sur le backend, une multiplication par 5,8 de l'impact lié au processeur et, surtout, une augmentation significative de l'impact réseau : une multiplication par 11 pour le frontend, ainsi qu'une explosion non quantifiable (de 0 à 20 mWh) pour le backend.
 ![image](./benchmark/screenshots/GF_analys_EcoMeteo_huge_amout_data_overview.png)
+
 Fig.9 : Évolution de l'impact de la consultation de la page d'accueil en passant de 15 articles à 9000.
 
 ### Prise en compte du passage à l'échelle
