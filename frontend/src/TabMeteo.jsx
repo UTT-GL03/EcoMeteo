@@ -16,7 +16,6 @@ function TabMeteo({ data, date, city }) {
             const cityData = data.rows.filter(item => item.doc.city === city);
             if (cityData) {
                 const weather = cityData.find(item => item.doc.meteo.date === date);
-                console.log(weather);
                 return weather.doc.meteo || null;
             }
             return null;

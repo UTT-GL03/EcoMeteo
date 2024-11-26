@@ -1,23 +1,48 @@
-{{!-- {
-  "meteo": [
-    {{#repeat 3}}
+{
+  "docs": [
+    {{#repeat 300}}
       {
-        "city": "{{random 'Paris' 'Troyes' 'Toulouse'}}",
-        "meteo": [{{#repeat 7}}
+        "city": "Paris",
+        "meteo":
           {
-            "date": "{{date '2024-10-07' '2024-10-08' 'YYYY-MM-DD hh'}}",
+            "date": "{{date '2024-10-07' '2024-10-15' 'YYYY-MM-DD hh'}}",
             "temperature": "{{int 10 25}}°C",
             "humidity": "{{int 50 90}}%",
             "wind": "{{random 'Nord' 'Sud' 'Est' 'Ouest' 'Nord-Est' 'Nord-Ouest' 'Sud-Est'}}",
             "precipitation": "{{random 'Aucun' 'Pluie' 'Neige' 'Grêle'}}"
-          }
-        {{/repeat}}] 
+          } 
+      }
+    {{/repeat}},
+    {{#repeat 300}}
+      {
+        "city": "Toulouse",
+        "meteo":
+          {
+            "date": "{{date '2024-10-07' '2024-10-15' 'YYYY-MM-DD hh'}}",
+            "temperature": "{{int 10 25}}°C",
+            "humidity": "{{int 50 90}}%",
+            "wind": "{{random 'Nord' 'Sud' 'Est' 'Ouest' 'Nord-Est' 'Nord-Ouest' 'Sud-Est'}}",
+            "precipitation": "{{random 'Aucun' 'Pluie' 'Neige' 'Grêle'}}"
+          } 
+      }
+    {{/repeat}},
+    {{#repeat 300}}
+      {
+        "city": "Troyes",
+        "meteo":
+          {
+            "date": "{{date '2024-10-07' '2024-10-15' 'YYYY-MM-DD hh'}}",
+            "temperature": "{{int 10 25}}°C",
+            "humidity": "{{int 50 90}}%",
+            "wind": "{{random 'Nord' 'Sud' 'Est' 'Ouest' 'Nord-Est' 'Nord-Ouest' 'Sud-Est'}}",
+            "precipitation": "{{random 'Aucun' 'Pluie' 'Neige' 'Grêle'}}"
+          } 
       }
     {{/repeat}}
   ]
-} --}}
+}
 
-{
+{{!-- {
   "meteo": [
     {
       "city": "Paris",
@@ -182,4 +207,4 @@
       ]
     }
   ]
-}
+} --}}
