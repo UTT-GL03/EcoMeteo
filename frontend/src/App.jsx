@@ -1,14 +1,22 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
 import DaySelector from './DaySelector';
 import Header from './Header'
 import TabMeteo from './TabMeteo'
-// import { Routes, Route } from 'react-router-dom'
-
 
 function App() {
+
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    fetch('http://localhost:5984/ecometeo/_all_docs?include_docs=true')
+     .then(x => x.json())
+     .then(data => {
+        setData(data);
+      })
+}, [])
 
   const [selectedCity, setSelectedCity] = useState('Paris');
   const [selectedDate, setSelectedDate] = useState("2024-10-08 00:00");
@@ -34,8 +42,8 @@ function App() {
 
   return (
     <>
-      <Header ville={selectedCity} cityChange={handleCity} selectedDate={selectedDate}/>
-      <TabMeteo date={selectedDate} city={selectedCity}/>
+      <Header data={data && data} ville={selectedCity} cityChange={handleCity} selectedDate={selectedDate}/>
+      <TabMeteo data={data && data} date={selectedDate} city={selectedCity}/>
       <DaySelector date={selectedDate} dateChange={handleDate}/>
     </>
   )

@@ -1,5 +1,4 @@
 import 'dayjs/locale/fr'
-// import data from './assets/sample_data.json'
 
 function DaySelector({date ,dateChange}) {
     return (
