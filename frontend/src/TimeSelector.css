@@ -1,0 +1,26 @@
+button {
+    margin: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  button:hover {
+    background-color: #0077cc;
+    color: white;
+  }
+  
+  button:focus {
+    outline: none;
+    background-color: #005fa3;
+    color: white;
+  }
+  
+  nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
