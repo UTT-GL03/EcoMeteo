@@ -5,6 +5,7 @@ import './App.css'
 import DaySelector from './DaySelector';
 import Header from './Header'
 import TabMeteo from './TabMeteo'
+import WeatherCard from './WeatherCard';
 
 function App() {
 
@@ -60,7 +61,8 @@ function App() {
   return (
     <>
       <Header cities={cities && cities} ville={selectedCity} cityChange={handleCity} selectedDate={selectedDate}/>
-      <TabMeteo data={data && data} date={selectedDate} city={selectedCity}/>
+      <TabMeteo data={data && data} date={selectedDate}/>
+      <WeatherCard data={data && data} date={selectedDate}/>
       <DaySelector date={selectedDate} dateChange={handleDate}/>
     </>
   )
