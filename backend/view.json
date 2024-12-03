@@ -1,0 +1,10 @@
+{
+  "_id": "_design/testCity",
+  "views": {
+    "city": {
+      "map": "function (doc) {\n  emit(doc.city);\n}",
+      "reduce": "_count"
+    }
+  },
+  "language": "javascript"
+}

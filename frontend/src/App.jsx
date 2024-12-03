@@ -12,17 +12,16 @@ function App() {
   const [cities, setCities] = useState([]);
 
   const [selectedCity, setSelectedCity] = useState('Paris');
-  const [selectedDate, setSelectedDate] = useState("2024-10-08");
+  const [selectedDate, setSelectedDate] = useState("2024-10-08 01:00");
 
   useEffect(() => {
-
-    console.log(selectedCity, selectedDate);
 
       fetch('http://localhost:5984/ecometeo/_find', {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           selector: { city: selectedCity, "meteo.date" : selectedDate },
+          sort: [{ "meteo.date": "asc" }],
           limit: 1
         })
       })     
@@ -33,18 +32,10 @@ function App() {
   }, [selectedCity, selectedDate]);
 
   useEffect(() => {
-    fetch('http://localhost:5984/ecometeo/_find', {
-      method: 'POST',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        selector: { "meteo.date" : selectedDate },
-        fields: ["city"],
-        limit: 1000000, // On veut tous les résultats (Ajout futur d'une table contenant une liste des villes)
-      })
-    })     
+    fetch('http://localhost:5984/ecometeo/_design/testCity/_view/city?reduce=true&group=true')     
     .then(x => x.json())
     .then(data => {
-        const uniqueCities = [...new Set(data.docs.map(doc => doc.city))];
+        const uniqueCities = [...new Set(data.rows.map(doc => doc.key))];
         setCities(uniqueCities);
     })
   }, []);
