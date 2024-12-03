@@ -1,0 +1,9 @@
+{
+    "index": {
+      "fields": [
+        {"meteo.date": "asc"}
+      ]
+    },
+    "name": "by_date",
+    "type": "json"
+}
