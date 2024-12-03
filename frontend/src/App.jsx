@@ -1,22 +1,17 @@
-import { useState, useEffect } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from 'react';
+import './App.css';
 import DaySelector from './DaySelector';
-import Header from './Header'
-import TabMeteo from './TabMeteo'
+import Header from './Header';
+import WeatherCard from './WeatherCard';
 
 function App() {
-
   const [data, setData] = useState({});
   const [cities, setCities] = useState([]);
-
   const [selectedCity, setSelectedCity] = useState('Paris');
   const [selectedDate, setSelectedDate] = useState("2024-10-08");
   const [selectedMoment, setSelectedMoment] = useState("matin");
 
   useEffect(() => {
-
       fetch('http://localhost:5984/ecometeo/_find', {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
@@ -27,9 +22,9 @@ function App() {
         })
       })     
       .then(x => x.json())
-      .then(data => { 
+      .then(data => {
           setData(data.docs[0]);
-      })
+      });
   }, [selectedCity, selectedDate]);
 
   useEffect(() => {
@@ -38,24 +33,31 @@ function App() {
     .then(data => {
         const uniqueCities = [...new Set(data.rows.map(doc => doc.key))];
         setCities(uniqueCities);
-    })
+      });
   }, []);
 
-
   const handleCity = (city) => {
-    setSelectedCity(city); 
+    setSelectedCity(city);
   };
+
   const handleDate = (date) => {
-    setSelectedDate(date); 
+    setSelectedDate(date);
   };
 
   return (
-    <>
-      <Header cities={cities && cities} ville={selectedCity} cityChange={handleCity} selectedDate={selectedDate}/>
-      <TabMeteo data={data && data} date={selectedDate} city={selectedCity}/>
-      <DaySelector date={selectedDate} dateChange={handleDate}/>
-    </>
-  )
+    <div className="app-container">
+      <Header
+        cities={cities}
+        ville={selectedCity}
+        cityChange={handleCity}
+        selectedDate={selectedDate}
+      />
+      <main className="main-content">
+        <WeatherCard data={data} date={selectedDate} />
+        <DaySelector date={selectedDate} dateChange={handleDate} />
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
