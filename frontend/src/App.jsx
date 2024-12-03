@@ -9,37 +9,29 @@ function App() {
   const [cities, setCities] = useState([]);
   const [selectedCity, setSelectedCity] = useState('Paris');
   const [selectedDate, setSelectedDate] = useState("2024-10-08");
+  const [selectedMoment, setSelectedMoment] = useState("matin");
 
   useEffect(() => {
-    console.log(selectedCity, selectedDate);
-
-    fetch('http://localhost:5984/ecometeo/_find', {
-      method: 'POST',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        selector: { city: selectedCity, "meteo.date": selectedDate },
-        limit: 1
-      })
-    })
-      .then((x) => x.json())
-      .then((data) => {
-        setData(data.docs[0]);
+      fetch('http://localhost:5984/ecometeo/_find', {
+        method: 'POST',
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          selector: { city: selectedCity, "meteo.date": selectedDate, "meteo.moment": selectedMoment },
+          sort: [{ "meteo.date": "asc" }],
+          limit: 1
+        })
+      })     
+      .then(x => x.json())
+      .then(data => {
+          setData(data.docs[0]);
       });
   }, [selectedCity, selectedDate]);
 
   useEffect(() => {
-    fetch('http://localhost:5984/ecometeo/_find', {
-      method: 'POST',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        selector: { "meteo.date": selectedDate },
-        fields: ["city"],
-        limit: 1000000
-      })
-    })
-      .then((x) => x.json())
-      .then((data) => {
-        const uniqueCities = [...new Set(data.docs.map((doc) => doc.city))];
+    fetch('http://localhost:5984/ecometeo/_design/testCity/_view/city?reduce=true&group=true')     
+    .then(x => x.json())
+    .then(data => {
+        const uniqueCities = [...new Set(data.rows.map(doc => doc.key))];
         setCities(uniqueCities);
       });
   }, []);
