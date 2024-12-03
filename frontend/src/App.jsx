@@ -12,7 +12,8 @@ function App() {
   const [cities, setCities] = useState([]);
 
   const [selectedCity, setSelectedCity] = useState('Paris');
-  const [selectedDate, setSelectedDate] = useState("2024-10-08 01:00");
+  const [selectedDate, setSelectedDate] = useState("2024-10-08");
+  const [selectedMoment, setSelectedMoment] = useState("matin");
 
   useEffect(() => {
 
@@ -20,7 +21,7 @@ function App() {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          selector: { city: selectedCity, "meteo.date" : selectedDate },
+          selector: { city: selectedCity, "meteo.date": selectedDate, "meteo.moment": selectedMoment },
           sort: [{ "meteo.date": "asc" }],
           limit: 1
         })

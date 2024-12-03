@@ -1,7 +1,7 @@
 {
     "index": {
       "fields": [
-        {"date": "desc"}
+        {"meteo.date": "asc"}
       ]
     },
     "name": "by_date",

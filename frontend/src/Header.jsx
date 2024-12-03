@@ -15,8 +15,6 @@ function Header({ cities, ville, cityChange, selectedDate }) {
 
     const formattedDate = new Date(selectedDate).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' });
 
-    console.log(selectedDate);
-
     return (
         <main className="container"  style={{ display: "flex", alignItems: "center", justifyContent: "space-around"}}>
             <Select
