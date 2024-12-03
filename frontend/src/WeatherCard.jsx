@@ -21,7 +21,7 @@ const WeatherCard = ({ data }) => {
   };
 
   return (
-    <div className="card" style={cardStyle}>
+    <div className="card" style={cardStyle} id="WeatherCard">
       <div className="grid">
         <div className="grid-item">
           <span className="label">Température:</span>
