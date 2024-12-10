@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import DaySelector from './DaySelector';
 import Header from './Header';
 import WeatherCard from './WeatherCard';
+import TimeSelector from './TimeSelector';
 
 function App() {
   const [data, setData] = useState({});
@@ -25,7 +25,7 @@ function App() {
       .then(data => {
           setData(data.docs[0]);
       });
-  }, [selectedCity, selectedDate]);
+  }, [selectedCity, selectedDate, selectedMoment]);
 
   useEffect(() => {
     fetch('http://localhost:5984/ecometeo/_design/testCity/_view/city?reduce=true&group=true')     
@@ -43,6 +43,9 @@ function App() {
   const handleDate = (date) => {
     setSelectedDate(date);
   };
+  const handleMoment = (moment) => {
+    setSelectedMoment(moment);
+  }
 
   return (
     <div className="app-container">
@@ -52,9 +55,9 @@ function App() {
         cityChange={handleCity}
         selectedDate={selectedDate}
       />
+      <TimeSelector date={selectedDate} dateChange={handleDate} momentChange={handleMoment}/>
       <main className="main-content">
         <WeatherCard data={data} date={selectedDate} />
-        <DaySelector date={selectedDate} dateChange={handleDate} />
       </main>
     </div>
   );

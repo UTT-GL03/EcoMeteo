@@ -19,7 +19,7 @@ function Header({ cities, ville, cityChange, selectedDate }) {
                     defaultValue={defaultValue}
                     onChange={handleChange}
                     options={options}
-                    placeholder="Choisissez une ville"
+                    placeholder={"Paris"}
                     className="select"
                 />
             </div>
