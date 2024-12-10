@@ -52,8 +52,14 @@ function TimeSelector({ dateChange, momentChange }) {
           Après-midi
         </button>
         <button
+<<<<<<< Updated upstream
           className={`button ${activeMoment === "soirée" ? "active" : ""}`}
           onClick={() => handleMomentClick("soirée")}
+=======
+          className="button"
+          value={"Soir"}
+          onClick={() => momentChange("soir")}
+>>>>>>> Stashed changes
         >
           Soir
         </button>
