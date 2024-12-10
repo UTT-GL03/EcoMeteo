@@ -1,58 +1,65 @@
+import { useState } from "react";
 import 'dayjs/locale/fr';
-import './TimeSelector.css'
+import './TimeSelector.css';
 
-function TimeSelector({ date, dateChange, momentChange }) {
+function TimeSelector({ dateChange, momentChange }) {
+  const [activeDate, setActiveDate] = useState("2024-10-08");
+  const [activeMoment, setActiveMoment] = useState("matin");
+
+  const handleDateClick = (value) => {
+    setActiveDate(value);
+    dateChange(value);
+  };
+
+  const handleMomentClick = (value) => {
+    setActiveMoment(value);
+    momentChange(value);
+  };
+
   return (
     <div className="container">
-      <nav className='grid'>
+      <nav className="grid">
         <button
-          className="button"
-          value={"2024-10-08"}
-          onClick={() => dateChange("2024-10-08")}
+          className={`button ${activeDate === "2024-10-08" ? "active" : ""}`}
+          onClick={() => handleDateClick("2024-10-08")}
         >
           8 octobre
         </button>
         <button
-          className="button"
-          value={"2024-10-09"}
-          onClick={() => dateChange("2024-10-09")}
+          className={`button ${activeDate === "2024-10-09" ? "active" : ""}`}
+          onClick={() => handleDateClick("2024-10-09")}
         >
           9 octobre
         </button>
         <button
-          className="button"
-          value={"2024-10-10"}
-          onClick={() => dateChange("2024-10-10")}
+          className={`button ${activeDate === "2024-10-10" ? "active" : ""}`}
+          onClick={() => handleDateClick("2024-10-10")}
         >
           10 octobre
         </button>
       </nav>
-      <nav className='grid'>
+      <nav className="grid">
         <button
-          className="button"
-          value={"Matin"}
-          onClick={() => momentChange("matin")}
+          className={`button ${activeMoment === "matin" ? "active" : ""}`}
+          onClick={() => handleMomentClick("matin")}
         >
           Matin
         </button>
         <button
-          className="button"
-          value={"Après-midi"}
-          onClick={() => momentChange("après-midi")}
+          className={`button ${activeMoment === "après-midi" ? "active" : ""}`}
+          onClick={() => handleMomentClick("après-midi")}
         >
           Après-midi
         </button>
         <button
-          className="button"
-          value={"Soir"}
-          onClick={() => momentChange("soirée")}
+          className={`button ${activeMoment === "soirée" ? "active" : ""}`}
+          onClick={() => handleMomentClick("soirée")}
         >
           Soir
         </button>
         <button
-          className="button"
-          value={"Nuit"}
-          onClick={() => momentChange("nuit")}
+          className={`button ${activeMoment === "nuit" ? "active" : ""}`}
+          onClick={() => handleMomentClick("nuit")}
         >
           Nuit
         </button>
