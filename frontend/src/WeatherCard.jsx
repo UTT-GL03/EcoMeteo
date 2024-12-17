@@ -46,10 +46,6 @@ const WeatherCard = ({ data }) => {
         <img
           src={data?.meteo?.wind ? `../public/icons/${data.meteo.wind}.png` : "#"} 
           alt={data?.meteo?.wind ? data.meteo.wind : "Image non disponible"}
-          style={{
-            clipPath: "inset(0px 0px 20px 0px)",
-            objectFit: "cover"
-          }}
         />
           <span>{data?.meteo?.wind ?? "Non disponible"}</span>
         </div>
