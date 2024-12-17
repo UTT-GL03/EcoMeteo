@@ -27,10 +27,16 @@ const WeatherCard = ({ data }) => {
           <span className="label">Température:</span>
           <span>{temperature !== null ? `${temperature}°C` : "Non disponible"}</span>
         </div>
-        <div className="grid-item">
+        <div className="grid-item precipitation-container">
           <span className="label">Précipitation:</span>
+          {data?.meteo?.precipitation !== "Aucun" ?
+            <img visibility={data?.meteo?.precipitation == "Aucun" ? "hidden" : "visible"}
+              src={data?.meteo?.precipitation ? `../public/icons/${data.meteo.precipitation}.png` : "#"} 
+              alt={data?.meteo?.precipitation ? data.meteo.precipitation : "Image non disponible"} 
+            /> : null
+          } 
           <span>{data?.meteo?.precipitation ?? "Non disponible"}</span>
-        </div>
+        </div>        
         <div className="grid-item">
           <span className="label">Humidité:</span>
           <span>{data?.meteo?.humidity ?? "Non disponible"}</span>
