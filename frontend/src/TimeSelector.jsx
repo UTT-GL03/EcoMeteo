@@ -53,7 +53,7 @@ function TimeSelector({ dateChange, momentChange }) {
         </button>
         <button
           className={`button ${activeMoment === "soir" ? "active" : ""}`}
-          onClick={() => momentChange("soir")}
+          onClick={() => handleMomentClick("soir")}
         >
           Soir
         </button>
