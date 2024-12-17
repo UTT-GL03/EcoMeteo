@@ -48,17 +48,19 @@ function App() {
   }
 
   return (
-    <div className="app-container">
+    <div className="app-container" id='mainDiv'>
       <Header
         cities={cities}
         ville={selectedCity}
         cityChange={handleCity}
         selectedDate={selectedDate}
       />
-      <TimeSelector date={selectedDate} dateChange={handleDate} momentChange={handleMoment}/>
-      <main className="main-content">
-        <WeatherCard data={data} date={selectedDate} />
-      </main>
+      <div id='content'>
+        <TimeSelector date={selectedDate} dateChange={handleDate} momentChange={handleMoment}/>
+        <main className="main-content">
+          <WeatherCard data={data} date={selectedDate} />
+        </main>
+      </div>
     </div>
   );
 }

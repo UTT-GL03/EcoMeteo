@@ -1,7 +1,7 @@
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1rem 2rem;
     background-color: #f4f4f4; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
@@ -10,16 +10,17 @@
 
 .select-container {
     flex: 1;
-    max-width: 300px;
 }
 
 .select {
     font-size: 1rem;
+    width: 60%;
 }
 
 .logo-container {
     flex: 1;
     text-align: center;
+    width: 53%;
 }
 
 .logo-container h2 {
@@ -32,6 +33,7 @@
 .info-container {
     flex: 1;
     text-align: right;
+    width: 33%;
 }
 
 .city-name {
@@ -46,3 +48,4 @@
     margin: 0;
     color: #7f8c8d;
 }
+

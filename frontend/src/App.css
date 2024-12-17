@@ -10,10 +10,17 @@
 #root {
   margin: 0 auto;
   text-align: center;
-  max-width: 1200px;
+  max-width: 98vw;
+  height: 100vh;
   padding: 1rem;
   background-color: var(--background-color);
   border-radius: 10px;
   box-shadow: 0 4px 6px var(--shadow-color);
 }
 
+#mainDiv {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
