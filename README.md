@@ -188,7 +188,7 @@ La figure 9 illustre l'impact du passage à l'échelle, de 15 à 9 000 fiches m�
 
 ![image](./benchmark/screenshots/GF_analys_EcoMeteo_huge_amout_data_overview.png)
 
-Fig.9 : Évolution de l'impact de la consultation de la page d'accueil en passant de 15 articles à 9000.
+Fig.9 : Évolution de l'impact de la consultation de la page d'accueil en passant de 15 documents à 9000.
 
 ### Prise en compte du passage à l'échelle
 
