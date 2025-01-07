@@ -2,10 +2,6 @@
 
 # Description
 
-### Choix du Sujet
-
-xxx 
-
 ### Objectifs
 L’application a pour objectif de fournir des prévisions météorologiques pour la France, tout en optimisant l'impact environnemental de l’accès à ces informations. Aujourd’hui, des services comme Météo France posent plusieurs défis environnementaux et d’expérience utilisateur, en particulier avec :
 - La surutilisation des données météorologiques en ligne.
@@ -13,21 +9,26 @@ L’application a pour objectif de fournir des prévisions météorologiques pou
 - Trop de publicités intrusives, dégradant l’expérience utilisateur.
 - Une surcharge d’informations jugées peu essentielles (exemple : articles, météo de la France, météo sur 15 jours).
 
-# Choix du sujet
+## Choix du sujet
 Les sites et applications météo figurent parmi les plateformes numériques les plus consultées dans le monde. Ces services mobilisent d'importantes infrastructures, telles que des centres de données, pour offrir des prévisions en temps réel et des fonctionnalités avancées. Ce modèle, bien que pratique, contribue à une empreinte écologique non négligeable, notamment en raison de la consommation énergétique nécessaire pour la collecte, le traitement et la diffusion des données météorologiques.
 
 Ainsi, il m'a semblé pertinent de concevoir une alternative plus respectueuse de l'environnement. Le projet vise à développer une application web météo allégée, optimisée pour limiter la surutilisation des données, réduire la fréquence de rafraîchissement, et éviter les publicités énergivores, tout en offrant une expérience utilisateur fluide et agréable.
 
-# Utilité sociale
+## Utilité sociale
 Un service de prévisions météorologiques joue un rôle central dans de nombreux aspects de la vie quotidienne et collective. Il constitue une ressource essentielle pour :
 
-- La sécurité des individus : En alertant sur des phénomènes météorologiques extrêmes (tempêtes, canicules, inondations), il permet aux populations de se préparer et de réduire les risques pour leur vie et leurs biens.
-- La planification des activités : Que ce soit pour les agriculteurs, les voyageurs, ou les organisateurs d'événements, les prévisions météo permettent d'adapter les décisions et de maximiser l'efficacité.
-- La santé publique : Les alertes sur les épisodes de pollution ou de chaleur extrême sont indispensables pour prévenir des problèmes de santé, en particulier pour les populations vulnérables.
-- La gestion des ressources : Dans des secteurs comme l’agriculture ou l’énergie renouvelable, la météo influence les décisions de production et d’utilisation des ressources, contribuant à une gestion plus durable.
-- La vie sociale et culturelle : Les prévisions facilitent également l’organisation des loisirs et des déplacements, éléments cruciaux du bien-être et de la cohésion sociale.
+- La sécurité des individus 
+  - En alertant sur des phénomènes météorologiques extrêmes (tempêtes, canicules, inondations), il permet aux populations de se préparer et de réduire les risques pour leur vie et leurs biens.
+- La planification des activités 
+  - Que ce soit pour les agriculteurs, les voyageurs, ou les organisateurs d'événements, les prévisions météo permettent d'adapter les décisions et de maximiser l'efficacité.
+- La santé publique 
+  - Les alertes sur les épisodes de pollution ou de chaleur extrême sont indispensables pour prévenir des problèmes de santé, en particulier pour les populations vulnérables.
+- La gestion des ressources 
+  - Dans des secteurs comme l’agriculture ou l’énergie renouvelable, la météo influence les décisions de production et d’utilisation des ressources, contribuant à une gestion plus durable.
+- La vie sociale et culturelle 
+  - Les prévisions facilitent également l’organisation des loisirs et des déplacements, éléments cruciaux du bien-être et de la cohésion sociale.
 
-# Impact de la numérisation
+## Impact de la numérisation
 La numérisation a profondément transformé les comportements de consultation des prévisions météorologiques. Là où la météo était traditionnellement diffusée via la presse écrite, la télévision ou la radio, elle est désormais accessible instantanément, à tout moment et en tout lieu, grâce aux smartphones, ordinateurs et objets connectés. Cette évolution soulève plusieurs enjeux :
 
   - Substitution ou addition aux anciens moyens :
@@ -52,12 +53,12 @@ La numérisation a profondément transformé les comportements de consultation d
 # Scénarios d'usage et impacts
 Nous faisons l'hypothèse que les utilisateurs visitent notre plateforme plusieurs fois par jour, par exemple en milieu d'après-midi avant de sortir pour une activité en extérieur ou avant de partir au travail, afin de vérifier les conditions météorologiques actuelles et les prévisions à venir. Ces visites peuvent durer quelques instants seulement. Pour cette raison, nous avons choisi de modéliser les scénarios suivants : l'un centré sur la consultation rapide de la météo en temps réel, et l'autre sur l'exploration des prévisions à long terme pour planifier des événements futurs.
 
-# Scénario 1 Consultation de la météo sur Paris et d'un article
+## Scénario 1 Consultation de la météo sur Paris et d'un article
   1. L'utilisateur se connecte à Météo France ou à un autre service météo en ligne.
   2. Il sélectionne sa localisation (ville, région) ou laisse le site utiliser sa position géographique.
   3. Il choisit de voir la météo du weekend.
 
-# Scénario 2 Exploration des prévisions à long terme
+## Scénario 2 Exploration des prévisions à long terme
   1. L'utilisateur effectue à nouveau les étapes 1, 2 et 3 du scénario 1.
   2. Il consulte les prévisions à court et moyen terme qui lui sont proposées en fonction de sa localisation.
   4. Les détails complets des prévisions pour cette période (températures, précipitations, vent, etc.) s'affichent.
@@ -78,7 +79,7 @@ Nous avons choisi de comparer l'impact des scénarios sur différents services d
   - [analyse Météo60](./benchmark/greenit_analysis_extension/Meteo60_greenit.png).
 
 Ayant eu des problèmes avec l'utilisation de greenit et des scénarios, par soucis de clarté nous avons décidé d'utiliser uniquement l'extensions Google Chrome de greenit pour chacun des services météo.
-L'analyse est porté sur la page principale de chacun des sites.
+L'analyse porte exclusivement sur la page principale de chacun des sites.
 
 ### ce qu'on retiens des analyses
 
@@ -151,7 +152,7 @@ Avec l'ajout de cette page, on peut tester un scénario de consultation de la m�
 
 __Tab.2__: Évaluation de l'impact du scénario "consulter la météo" dans le prototype n°1.
 
-Bien que ces estimation soient basses dû aux données statiques utilisées, elles nous permettent tout de même de comparer avec celle des services concurrents vues précédemment.
+Bien que ces estimations soient basses en raison des données statiques utilisées, elles nous permettent tout de même de les comparer avec celles des services concurrents mentionnées précédemment.
 
 # Prototype n°2 : Fonctionnalités pour le scénario prioritaire avec données statiques chargées de manière dynamique
 
