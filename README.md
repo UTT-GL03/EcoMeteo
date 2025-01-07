@@ -1,16 +1,16 @@
 # ÉcoMétéo
 
-# Choix du sujet
-Les sites et applications météo figurent parmi les plateformes numériques les plus consultées dans le monde. Ces services mobilisent d'importantes infrastructures, telles que des centres de données, pour offrir des prévisions en temps réel et des fonctionnalités avancées. Ce modèle, bien que pratique, contribue à une empreinte écologique non négligeable, notamment en raison de la consommation énergétique nécessaire pour la collecte, le traitement et la diffusion des données météorologiques.
-
-Ainsi, il m'a semblé pertinent de concevoir une alternative plus respectueuse de l'environnement. Le projet vise à développer une application web météo allégée, optimisée pour limiter la surutilisation des données, réduire la fréquence de rafraîchissement, et éviter les publicités énergivores, tout en offrant une expérience utilisateur fluide et agréable.
-
 # Description
 L’application a pour objectif de fournir des prévisions météorologiques pour la France, tout en optimisant l'impact environnemental de l’accès à ces informations. Aujourd’hui, des services comme Météo France posent plusieurs défis environnementaux et d’expérience utilisateur, en particulier avec :
 - La surutilisation des données météorologiques en ligne.
 - Un rafraîchissement automatique très fréquent (parfois toutes les 30 secondes).
 - Trop de publicités intrusives, dégradant l’expérience utilisateur.
 - Une surcharge d’informations jugées peu essentielles (exemple : articles, météo de la France, météo sur 15 jours).
+
+# Choix du sujet
+Les sites et applications météo figurent parmi les plateformes numériques les plus consultées dans le monde. Ces services mobilisent d'importantes infrastructures, telles que des centres de données, pour offrir des prévisions en temps réel et des fonctionnalités avancées. Ce modèle, bien que pratique, contribue à une empreinte écologique non négligeable, notamment en raison de la consommation énergétique nécessaire pour la collecte, le traitement et la diffusion des données météorologiques.
+
+Ainsi, il m'a semblé pertinent de concevoir une alternative plus respectueuse de l'environnement. Le projet vise à développer une application web météo allégée, optimisée pour limiter la surutilisation des données, réduire la fréquence de rafraîchissement, et éviter les publicités énergivores, tout en offrant une expérience utilisateur fluide et agréable.
 
 # Utilité sociale
 Un service de prévisions météorologiques joue un rôle central dans de nombreux aspects de la vie quotidienne et collective. Il constitue une ressource essentielle pour :
@@ -22,11 +22,26 @@ Un service de prévisions météorologiques joue un rôle central dans de nombre
 - La vie sociale et culturelle : Les prévisions facilitent également l’organisation des loisirs et des déplacements, éléments cruciaux du bien-être et de la cohésion sociale.
 
 # Impact de la numérisation
-La numérisation impacte directement les comportements de consultation des prévisions météorologiques. Avec la démocratisation des smartphones, les utilisateurs ont pris l’habitude de consulter la météo plusieurs fois par jour, provoquant une surconsommation d’énergie et un transfert massif de données inutiles. Notre solution numérique apporte plusieurs améliorations :
-- Optimisation de la consommation énergétique : en réduisant la fréquence de rafraîchissement des données (par exemple, toutes les 5 minutes au lieu de 30 secondes) ou en la supprimant totalement, nous visons à réduire l’impact environnemental.
-- Réduction des données affichées : nous proposons une interface minimaliste, présentant uniquement les informations essentielles. Les utilisateurs peuvent demander des détails supplémentaires, mais ces informations sont limitées en nombre.
-- Amélioration de l’expérience utilisateur : sans publicités et avec moins d’informations superflues, notre application devient plus agréable et facile à utiliser.
-- Modèle de prévisions : en limitant la consultation de prévisions à court terme (par exemple sur 3 jours maximum), nous limitons la surcharge des serveurs et la consommation énergétique liée à la gestion de données à plus long terme, qui est souvent peu fiable. Cette prévisions sur une courte période pourrait à long terme inciter les developpeurs d'API météo à réduire leurs plage de données ce qui aurait un impact important. 
+La numérisation a profondément transformé les comportements de consultation des prévisions météorologiques. Là où la météo était traditionnellement diffusée via la presse écrite, la télévision ou la radio, elle est désormais accessible instantanément, à tout moment et en tout lieu, grâce aux smartphones, ordinateurs et objets connectés. Cette évolution soulève plusieurs enjeux :
+
+  - Substitution ou addition aux anciens moyens :
+    - Si certains utilisateurs ont abandonné les supports traditionnels pour consulter la météo exclusivement en ligne, d’autres continuent d’utiliser ces supports tout en intégrant des consultations numériques. Ainsi, dans bien des cas, la numérisation s’ajoute aux pratiques existantes plutôt que de s’y substituer, augmentant globalement la consommation d’énergie liée à la météo.
+    - Exemple: une personne peut regarder les prévisions à la télévision le matin, mais vérifier les mises à jour plusieurs fois dans la journée sur son smartphone.
+
+  - Effet rebond :
+    - La simplicité et la rapidité d’accès aux prévisions via les outils numériques encouragent une consultation fréquente et parfois excessive. Ce phénomène entraîne une surconsommation de données et d’énergie.
+    - Exemple : Alors que la consultation de la météo via un journal ou une émission télévisée se faisait une ou deux fois par jour, les utilisateurs d’applications météo consultent désormais ces informations plusieurs fois par jour, voire par heure, même en l’absence de besoin réel.
+
+  - Baisse ou hausse de l’impact écologique par rapport aux moyens traditionnels :
+    - Si l’accès numérique peut sembler moins coûteux en ressources matérielles que la presse écrite (papier, encre, transport) ou la diffusion télé/radio (énergie des antennes et équipements), la réalité est plus     complexe. Les infrastructures numériques (centres de données, serveurs, réseaux) génèrent une empreinte énergétique importante, souvent invisible pour l’utilisateur.
+    - Par ailleurs, le caractère instantané et personnalisable des prévisions numériques alimente un usage intensif, ce qui limite le potentiel bénéfice écologique par rapport aux anciens supports.
+
+  - Notre solution face à ces défis :
+
+    - Optimisation de la consommation énergétique : En réduisant la fréquence de rafraîchissement des données (par exemple, toutes les 5 minutes au lieu de 30 secondes), ou en permettant à l’utilisateur de choisir un rafraîchissement manuel, nous limitons l’impact environnemental.
+    - Réduction des données affichées : En privilégiant une interface minimaliste et centrée sur les informations essentielles, nous réduisons le transfert de données inutiles. Les informations secondaires restent disponibles à la demande, mais leur affichage est restreint.
+    - Prévisions à court terme : En nous concentrant sur des prévisions fiables à 3 jours maximum, nous limitons la surcharge des serveurs et la consommation énergétique liée à des calculs pour des périodes plus longues, souvent moins précises.
+    - Effet incitatif à long terme : En réduisant la demande en données météorologiques massives, notre solution pourrait inspirer d'autres développeurs et fournisseurs d'API météo à adapter leurs pratiques, créant un effet positif à l’échelle de l’écosystème numérique. 
 
 # Scénarios d'usage et impacts
 Nous faisons l'hypothèse que les utilisateurs visitent notre plateforme plusieurs fois par jour, par exemple en milieu d'après-midi avant de sortir pour une activité en extérieur ou avant de partir au travail, afin de vérifier les conditions météorologiques actuelles et les prévisions à venir. Ces visites peuvent durer quelques instants seulement. Pour cette raison, nous avons choisi de modéliser les scénarios suivants : l'un centré sur la consultation rapide de la météo en temps réel, et l'autre sur l'exploration des prévisions à long terme pour planifier des événements futurs.
