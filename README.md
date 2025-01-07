@@ -1,5 +1,10 @@
 # ÉcoMétéo
 
+# Choix du sujet
+Les sites et applications météo figurent parmi les plateformes numériques les plus consultées dans le monde. Ces services mobilisent d'importantes infrastructures, telles que des centres de données, pour offrir des prévisions en temps réel et des fonctionnalités avancées. Ce modèle, bien que pratique, contribue à une empreinte écologique non négligeable, notamment en raison de la consommation énergétique nécessaire pour la collecte, le traitement et la diffusion des données météorologiques.
+
+Ainsi, il m'a semblé pertinent de concevoir une alternative plus respectueuse de l'environnement. Le projet vise à développer une application web météo allégée, optimisée pour limiter la surutilisation des données, réduire la fréquence de rafraîchissement, et éviter les publicités énergivores, tout en offrant une expérience utilisateur fluide et agréable.
+
 # Description
 L’application a pour objectif de fournir des prévisions météorologiques pour la France, tout en optimisant l'impact environnemental de l’accès à ces informations. Aujourd’hui, des services comme Météo France posent plusieurs défis environnementaux et d’expérience utilisateur, en particulier avec :
 - La surutilisation des données météorologiques en ligne.
