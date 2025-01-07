@@ -53,16 +53,14 @@ La numérisation a profondément transformé les comportements de consultation d
 # Scénarios d'usage et impacts
 Nous faisons l'hypothèse que les utilisateurs visitent notre plateforme plusieurs fois par jour, par exemple en milieu d'après-midi avant de sortir pour une activité en extérieur ou avant de partir au travail, afin de vérifier les conditions météorologiques actuelles et les prévisions à venir. Ces visites peuvent durer quelques instants seulement. Pour cette raison, nous avons choisi de modéliser les scénarios suivants : l'un centré sur la consultation rapide de la météo en temps réel, et l'autre sur l'exploration des prévisions à long terme pour planifier des événements futurs.
 
-## Scénario 1 Consultation de la météo sur Paris et d'un article
+## Scénario 1 Consultation de la météo sur Paris
   1. L'utilisateur se connecte à Météo France ou à un autre service météo en ligne.
   2. Il sélectionne sa localisation (ville, région) ou laisse le site utiliser sa position géographique.
   3. Il choisit de voir la météo du weekend.
 
 ## Scénario 2 Exploration des prévisions à long terme
   1. L'utilisateur effectue à nouveau les étapes 1, 2 et 3 du scénario 1.
-  2. Il consulte les prévisions à court et moyen terme qui lui sont proposées en fonction de sa localisation.
-  4. Les détails complets des prévisions pour cette période (températures, précipitations, vent, etc.) s'affichent.
-  5. Il revient à la liste des prévisions pour continuer son exploration ou consulter d'autres jours.
+  2. En cliquant sur une journée spécifique, il consulte les détails complets pour cette date.
 
 # Impact de l'exécution des scénarios auprès de différents services concurrents
 L'EcoIndex d'une page (de A à G) est calculé (sources : [EcoIndex](https://www.ecoindex.fr/), [GreenIT](https://github.com/cnumr/GreenIT-Analysis/tree/acc0334c712ba68939466c42af1514b5f448e19f)) en fonction du positionnement de cette page parmi les pages mondiales concernant :
