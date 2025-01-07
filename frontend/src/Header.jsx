@@ -26,7 +26,7 @@ function Header({ cities, ville, cityChange, selectedDate }) {
             <div className="logo-container">
                 <h2>Éco Météo</h2>
             </div>
-            <div className="info-container">
+            <div className="info-container info">
                 <p className="city-name">{ville || 'Ville non sélectionnée'}</p>
                 <p className="date">{formattedDate}</p>
             </div>
