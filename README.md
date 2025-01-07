@@ -1,6 +1,12 @@
 # ÉcoMétéo
 
 # Description
+
+### Choix du Sujet
+
+xxx 
+
+### Objectifs
 L’application a pour objectif de fournir des prévisions météorologiques pour la France, tout en optimisant l'impact environnemental de l’accès à ces informations. Aujourd’hui, des services comme Météo France posent plusieurs défis environnementaux et d’expérience utilisateur, en particulier avec :
 - La surutilisation des données météorologiques en ligne.
 - Un rafraîchissement automatique très fréquent (parfois toutes les 30 secondes).
@@ -49,9 +55,7 @@ Nous faisons l'hypothèse que les utilisateurs visitent notre plateforme plusieu
 # Scénario 1 Consultation de la météo sur Paris et d'un article
   1. L'utilisateur se connecte à Météo France ou à un autre service météo en ligne.
   2. Il sélectionne sa localisation (ville, région) ou laisse le site utiliser sa position géographique.
-  3. Il choisit de voir la mètéo du weekend.
-  4. Il retourne sur la page d'accueil.
-  5. Il séléctionne un article et le lit.
+  3. Il choisit de voir la météo du weekend.
 
 # Scénario 2 Exploration des prévisions à long terme
   1. L'utilisateur effectue à nouveau les étapes 1, 2 et 3 du scénario 1.
@@ -60,7 +64,7 @@ Nous faisons l'hypothèse que les utilisateurs visitent notre plateforme plusieu
   5. Il revient à la liste des prévisions pour continuer son exploration ou consulter d'autres jours.
 
 # Impact de l'exécution des scénarios auprès de différents services concurrents
-L'EcoIndex d'une page (de A à G) est calculé (sources : EcoIndex, Octo, GreenIT) en fonction du positionnement de cette page parmi les pages mondiales concernant :
+L'EcoIndex d'une page (de A à G) est calculé (sources : [EcoIndex](https://www.ecoindex.fr/), [GreenIT](https://github.com/cnumr/GreenIT-Analysis/tree/acc0334c712ba68939466c42af1514b5f448e19f)) en fonction du positionnement de cette page parmi les pages mondiales concernant :
 
   - le nombre de requêtes lancées,
   - le poids des téléchargements,
@@ -68,20 +72,22 @@ L'EcoIndex d'une page (de A à G) est calculé (sources : EcoIndex, Octo, GreenI
 
 Nous avons choisi de comparer l'impact des scénarios sur différents services de météo nationaux :
 
-  - [Météo France](./benchmark/greenit_analysis_extension/MeteoFrance_greenit.png),
-  - [La Chaîne Météo](./benchmark/greenit_analysis_extension/LaChaineMeteo_greenit.png),
-  - [MétéoCiel](./benchmark/greenit_analysis_extension/MeteoCiel_greenit.png),
-  - [Météo60](./benchmark/greenit_analysis_extension/Meteo60_greenit.png).
+  - [analyse Météo France](./benchmark/greenit_analysis_extension/MeteoFrance_greenit.png),
+  - [analyse La Chaîne Météo](./benchmark/greenit_analysis_extension/LaChaineMeteo_greenit.png),
+  - [analyse MétéoCiel](./benchmark/greenit_analysis_extension/MeteoCiel_greenit.png),
+  - [analyse Météo60](./benchmark/greenit_analysis_extension/Meteo60_greenit.png).
 
 Ayant eu des problèmes avec l'utilisation de greenit et des scénarios, par soucis de clarté nous avons décidé d'utiliser uniquement l'extensions Google Chrome de greenit pour chacun des services météo.
 L'analyse est porté sur la page principale de chacun des sites.
+
+### ce qu'on retiens des analyses
 
 # Maquette de l'interface et échantillon de données
 
 Au vu des différents services comparés, des exigences environnementales exprimées plus haut et des scénarios retenus, nous avons défini pour notre prototype une maquette de l'interface et un échantillon de données réalistes.
 
 L'interface retenue est composée d'une seule "page Web".
-On y retrouve le header avec le nom du site et un formulaire permettant de choisir la ville. Une partie principale où l'on pourra observer les prévisions météo. Et enfin une menu pour choisir le jour que l'on souhaite observer. (cf. Fig. 1)
+On y retrouve le header avec le nom du site et un formulaire permettant de choisir la ville. Une partie principale où l'on pourra observer les prévisions météo. Et enfin, un menu qui permet de choisir le jour que l'on souhaite observer. (cf. Fig. 1)
 
 ![image](./frontend/mockup.png)
 __Fig.1 :__ maquette de l'interface du prototype
@@ -104,7 +110,7 @@ Pour cette première version du prototype :
 
   - l'échantillon de données est encore chargé dans le code de manière statique,
   - les fonctionnalités implémentées ne sont que celles nécessaires pour suivre le scénario prioritaire ("Regarder la météo sur Paris").
-Ce scénario nécessite de pouvoir charger la page principale et regarder la météo sur Paris
+Ce scénario nécessite de pouvoir charger la page principale et regarder la météo sur Paris.
 
 ## Page Météo
 
@@ -114,12 +120,12 @@ Nous avons développé la page météo (cf. Fig. 2) pour qu'elle affiche l'écha
 __Fig.2:__ Prototype de la page météo
 
 Pour l'instant, nous avons choisi un *framework* de mise en page minimaliste ([*PicoCSS*](https://picocss.com)).
-nous verrons si l'impact environnemental du passage à un *framework* de mise en page plus puissant.
+Nous verrons si l'impact environnemental du passage à un *framework* de mise en page plus puissant est significatif ou non.
 
-Nous avons décidé pour l'instant de n'inclure aucune image ni design pour l'affichage de la météo. Même si ces design rendent l'utilisation de la plupart des applications de prévisions météo agréable, elles sont parfois inutile et apporte une polution visuelle et peu avoir un impact environnemental.
-Dans les prochains prototypes, nous allons inclure des pictogrammes, ces petites images souvent au format CSV sont très légères et rendent l'utilisation d'un site beaucoup plus agréable.
+Nous avons décidé pour l'instant de n'inclure aucune image ni design spécifique (pas de style sur la page) pour l'affichage de la météo. Même si ce style rend l'utilisation de la plupart des applications de prévisions météo agréablent, il est parfois inutile, apporte une polution visuelle et peu avoir un impact environnemental.
+Dans les prochains prototypes, nous allons inclure des pictogrammes, de petits dessins souvent au format CSV qui sont très légers et rendent l'utilisation d'un site beaucoup plus agréable.
 Également, les données statiques que nous utilisont ici sont uniquement les données importantes, nous n'avons pas encore vu la partie pour afficher des données supplémentaires.
-En fonction de l'utilités de ces dernières et de leurs impact nous les ajouterons ou non aux prototypes suivants.
+En fonction de l'utilité de ces dernières et de leurs impact nous les ajouterons ou non aux prototypes suivants.
 
 
 Dans l'état actuel du prototype, il est possible d'avoir une première idée de l'impact environnemental du *frontend*.
@@ -145,7 +151,7 @@ Avec l'ajout de cette page, on peut tester un scénario de consultation de la m�
 
 __Tab.2__: Évaluation de l'impact du scénario "consulter la météo" dans le prototype n°1.
 
-Bien que ces estimation soit basses dû aux données statiques utilisées, elles nous permettent tout de même de comparer avec celle des services concurrents vues précédemment.
+Bien que ces estimation soient basses dû aux données statiques utilisées, elles nous permettent tout de même de comparer avec celle des services concurrents vues précédemment.
 
 # Prototype n°2 : Fonctionnalités pour le scénario prioritaire avec données statiques chargées de manière dynamique
 
@@ -153,7 +159,7 @@ Pour cette deuxième version du prototype, les données (toujours statiques) son
 
 Concernant l'évaluation de l'impact environemental du scénario, par rapport au tableau précédent (cf. Tab.2), à l'exception du nombre de requêtes qui est incrémenté de 1, les résultats sont strictement identiques. D'ailleurs, à partir de cette version, et à moins de changements profonds, l'EcoIndex ne devrait plus évoluer de manière significative. Nous utiliserons désormais un autre logiciel, GreenFrame, qui évalue non pas l'impact "environné" de la consultation (incorporant une participation au cycle de vie du terminal) mais celui de la consultation proprement dite (cf. Tab.3) et de manière beaucoup plus fiable à partir des statistiques d'utilisation des ressources physiques (CPU, mémoire, réseau, disque).
 
-|   | Impact de la consultation de la page
+|   | Impact de la consultation de la page (mg CO2e)
 |-----------|-----:
 | La Chaine Météo | 72 | 
 | Météo60 | 88 |
@@ -161,7 +167,7 @@ Concernant l'évaluation de l'impact environemental du scénario, par rapport au
 | MétéoFrance | 272 | 
 | EcoMeteo | 32 |
 
-Tab.3 : Impact en mg CO2e de la consultation de la page principale des sites météos concurrents (y compris notre service).
+Tab.3 : Impact de la consultation de la page principale des sites météos concurrents (y compris notre service).
 
 Pour les services existants, sur le graphique présentant l'utilisation dans le temps des ressources (cf. Fig.4), on constate d'autres pics que le pic initial, probablement associés au chargement et à l'affichage de contenus multimédias et de publicités, ou causés par des techniques de pistage sur le Web. De plus, l'utilisation CPU est extrêmement forte.
 
