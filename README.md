@@ -291,3 +291,18 @@ Vous pourrez constater les améliorations réalisées grâce à cette optimisati
 ![image](./benchmark/screenshots/GF_analys_EcoMeteo_huge_amout_data_optimized_overview.png)
 
 Fig.10 : Évolution de l'impact de la consultation de la page d'accueil en ne récupérant que les fiches météo nécessaires.
+
+### Retour sur l'optimisation de la consommation énergétique
+Ce projet nous a permis de découvrir plusieurs stratégies pour réduire l'impact écologique d'un site web. Voici les principaux enseignements :
+
+- Mesurer l'impact : Utiliser des outils comme EcoIndex et GreenIT est essentiel pour quantifier l'empreinte carbone d'un site et cibler les actions à prendre pour la réduire.
+
+- Limiter / supprimer les publicités : Les publicités génèrent de nombreuses requêtes et augmentent la consommation d'énergie. Leur suppression améliore à la fois l'impact écologique et l'expérience utilisateur.
+
+- Filtrer les données : Ne charger que les données nécessaires, par exemple les prévisions sur 3 jours, permet de réduire le poids des pages et de limiter la consommation de ressources.
+
+- Optimiser les requêtes : En utilisant la pagination et en évitant les requêtes inutiles, nous avons diminué le nombre de données transférées et le nombre de requêtes envoyées aux serveurs.
+
+- Remettre en question les dépendances : L'utilisation de frameworks légers, comme PicoCSS, permet de réduire la taille du code et le nombre de requêtes, contribuant ainsi à un meilleur bilan écologique.
+
+- Limiter les images : En privilégiant des formats légers comme SVG et en supprimant les images lourdes, nous avons réduit la consommation de données et amélioré la performance du site.
