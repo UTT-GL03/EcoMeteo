@@ -13,11 +13,13 @@ L’application a pour objectif de fournir des prévisions météorologiques pou
 - Une surcharge d’informations jugées peu essentielles (exemple : articles, météo de la France, météo sur 15 jours).
 
 # Utilité sociale
-L’utilité sociale de ce projet réside dans sa capacité à proposer une alternative plus durable à la consultation des prévisions météorologiques. Aujourd’hui, l’empreinte énergétique du numérique est de plus en plus préoccupante, et chaque action en ligne, telle que la consultation de la météo, contribue à la consommation de ressources. Notre application vise donc à :
-- Sensibiliser les utilisateurs à l’impact énergétique des actions numériques.
-- Offrir une plateforme allégée, sans publicité, qui met en avant l’essentiel pour l’utilisateur (températures, précipitations).
-- Limiter l’affichage des informations secondaires et optionnelles, accessibles uniquement à la demande.
-- Encourager une consommation raisonnée et écologique de l’information.
+Un service de prévisions météorologiques joue un rôle central dans de nombreux aspects de la vie quotidienne et collective. Il constitue une ressource essentielle pour :
+
+- La sécurité des individus : En alertant sur des phénomènes météorologiques extrêmes (tempêtes, canicules, inondations), il permet aux populations de se préparer et de réduire les risques pour leur vie et leurs biens.
+- La planification des activités : Que ce soit pour les agriculteurs, les voyageurs, ou les organisateurs d'événements, les prévisions météo permettent d'adapter les décisions et de maximiser l'efficacité.
+- La santé publique : Les alertes sur les épisodes de pollution ou de chaleur extrême sont indispensables pour prévenir des problèmes de santé, en particulier pour les populations vulnérables.
+- La gestion des ressources : Dans des secteurs comme l’agriculture ou l’énergie renouvelable, la météo influence les décisions de production et d’utilisation des ressources, contribuant à une gestion plus durable.
+- La vie sociale et culturelle : Les prévisions facilitent également l’organisation des loisirs et des déplacements, éléments cruciaux du bien-être et de la cohésion sociale.
 
 # Impact de la numérisation
 La numérisation impacte directement les comportements de consultation des prévisions météorologiques. Avec la démocratisation des smartphones, les utilisateurs ont pris l’habitude de consulter la météo plusieurs fois par jour, provoquant une surconsommation d’énergie et un transfert massif de données inutiles. Notre solution numérique apporte plusieurs améliorations :
