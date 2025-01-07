@@ -79,7 +79,64 @@ Nous avons choisi de comparer l'impact des scénarios sur différents services d
 Ayant eu des problèmes avec l'utilisation de greenit et des scénarios, par soucis de clarté nous avons décidé d'utiliser uniquement l'extensions Google Chrome de greenit pour chacun des services météo.
 L'analyse porte exclusivement sur la page principale de chacun des sites.
 
-### ce qu'on retiens des analyses
+### Analyse approfondie
+
+#### Ce que nous retenons de ces analyses
+
+- Variabilité des impacts selon les services :
+    - Les résultats montrent des écarts significatifs entre les services analysés. Certaines plateformes sont optimisées pour un usage plus léger (moins de requêtes et d'éléments sur la page principale), tandis que d'autres présentent des charges importantes liées à des fonctionnalités ou des contenus lourds.
+
+- Importance du nombre d'éléments :
+    - Les services ayant un grand nombre d'éléments sur leur page principale obtiennent des scores EcoIndex plus faibles. Cela inclut des publicités, des scripts tiers, ou des images lourdes.
+
+- Poids des téléchargements :
+    - Les pages contenant des médias non compressés ou mal optimisés augmentent significativement leur empreinte. Les vidéos ou les animations intégrées sont les principales sources de ce surpoids.
+
+#### Ce qui nous a surpris
+
+- Les scripts tiers sont omniprésents :
+    - La présence de nombreux scripts tiers (pour les publicités ou l'analyse comportementale) est l'un des facteurs principaux de l'augmentation des requêtes et du poids des pages. Cela a un impact majeur, souvent non anticipé, sur la performance environnementale.
+
+- Manque d’optimisation globale :
+    - Même pour des services nationaux et bien établis, les optimisations pour réduire l'empreinte écologique sont souvent insuffisantes. Par exemple, les images ne sont pas toujours compressées et des requêtes inutiles continuent d'être envoyées.
+
+- L'importance des animations et visuels lourds :
+    - Certains services misent sur des animations (cartes dynamiques, modèles en 3D, etc.) pour enrichir l'expérience utilisateur. Ces éléments sont très gourmands, mais leur utilité pour l'utilisateur reste parfois discutable.
+
+#### Comportements les moins éco-responsables
+
+- Publicités et trackers :
+    - Les pages incluant de nombreuses publicités dynamiques et trackers alourdissent considérablement les requêtes et le poids de la page.
+
+- Design surchargé :
+    - Les interfaces complexes avec un grand nombre de widgets (par exemple, des cartes interactives ou des flux en temps réel) augmentent le nombre d'éléments à charger.
+
+- Mauvaise gestion des ressources :
+    - Certaines pages effectuent des appels en continu à des serveurs pour actualiser des données même si l'utilisateur ne les consulte pas activement.
+
+#### Correspondance avec les anticipations
+
+- Anticipations confirmées : 
+    - Nous avions prévu que les publicités et animations dynamiques seraient des facteurs de surconsommation. Les résultats confirment que ce sont les principaux contributeurs à une faible performance environnementale.
+- Surprises : 
+    - L'impact des scripts tiers, notamment ceux des trackers publicitaires, était sous-estimé. Ils contribuent largement à l'augmentation des requêtes, souvent de manière invisible pour l'utilisateur.
+
+#### Bonnes pratiques pour notre propre conception
+
+- Limiter le nombre d'éléments sur les pages principales :
+    - Réduire le nombre de widgets, scripts tiers et éléments superflus pour limiter les requêtes.
+
+- Optimiser les médias :
+    - Compresser systématiquement les images et limiter les animations gourmandes en ressources.
+
+- Minimiser les appels serveur inutiles :
+    - Implémenter une gestion de cache efficace et limiter les actualisations automatiques non essentielles.
+
+- Choisir des technologies écoresponsables :
+    - Utiliser des outils légers et respectueux de l’environnement, tout en optimisant le code pour réduire les besoins en bande passante.
+
+- Éduquer les utilisateurs :
+    - Encourager une utilisation raisonnée, par exemple en expliquant que des consultations trop fréquentes ou l’activation de certaines fonctionnalités peuvent augmenter l’impact environnemental.
 
 # Maquette de l'interface et échantillon de données
 
